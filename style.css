@@ -1,16 +1,55 @@
-body {
+.body {
     background-color: #222;
     color: whitesmoke;
 }
 
-h3 {
+.h3 {
     text-align: center;
 }
 
-img {
+.img {
     display: block;
     margin: auto;
     width: 350px;
     
+}
+<!--Audio-->
+.music-player {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#playPauseBtn {
+  background-color: #444;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#playPauseBtn:hover {
+  background-color: #666;
+}
+
+#progressBar {
+  flex: 1;
+  height: 5px;
+  background: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
