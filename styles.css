@@ -19,25 +19,39 @@ body {
     position: relative; /* clave para que el ::before no se salga */
     margin: 100px auto;
     width: 600px;
-    background-color: whitesmoke;
-    border: 2px solid #000000;
+    background-image: url("realbackcard.png");
+    border: 2px solid #ffffff;
     box-shadow: 4px 4px 0 #808080;
     font-family: 'Slackside One', sans-serif;
     z-index: 10;
     overflow: hidden; /* evita que el borde decorativo sobresalga */
 }
 
+.reproductor-musica::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.337);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
 
+.reproductor-musica > * {
+    position: relative;
+    z-index: 2;
+}
 /* Hereda de las otras ventanas */
 #card .barra-superior {
-    background: url("backcard.jpg");
-    background-size: 90px;
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
     color: white;
     padding: 4px 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: move;
 }
 
 #card .titulo-ventana {
@@ -207,7 +221,7 @@ body {
     top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
     width: 260px;
     background-color: #c0c0c0;
-    border: 2px solid #000000;
+    border: 2px solid #ffffff;
     box-shadow: 3px 3px 0 #808080;
     z-index: 999;
 }
