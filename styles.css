@@ -11,11 +11,20 @@
 
 }
 
-main {
+body {
+    background: url("final.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#card {
     font-family: Slackside One, sans-serif;
     margin: 400px;
     padding: 110;
     color: black;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .reproductor-musica {
