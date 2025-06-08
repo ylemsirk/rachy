@@ -10,6 +10,13 @@
     justify-content: center;
 
 }
+
+main {
+    font-family: Slackside One, sans-serif;
+    margin: 150px;
+    color: black;
+}
+
 .reproductor-musica {
     display: flex;
     flex-direction: column;
