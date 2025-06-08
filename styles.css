@@ -10,7 +10,7 @@
     justify-content: center;
 
 }
-.playlist {
+.reproductor-musica {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,24 +19,41 @@
     padding: 10px 30px;
     border-radius: 20px;
     background: url("mymelo.jpg");
-    background-size: 250px;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
 }
 
-#title {
-    color: rgb(50, 50, 50);
+.reproductor-musica::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.337);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.reproductor-musica > * {
+    position: relative;
+    z-index: 2;
+}
+
+.reproductor-musica h1 {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.6;
 }
 
-#para {
-    color: rgb(47, 47, 47);
+.reproductor-musica p {
     font-size: 1rem;
     font-weight: 400;
     opacity: 0.6;
 }
 
-#progress {
+#progreso {
     appearance: none;
     -webkit-appearance: none;
     width: 100%;
@@ -48,7 +65,7 @@
 
 }
 
-#progress::-webkit-slider-thumb {
+#progreso::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
     background: rgb(255, 246, 246);
@@ -58,12 +75,12 @@
     outline: 4px solid #ffffff;
     box-shadow: 0px 7px 10px rgb(255, 208, 208)
 }
-.controls {
+.controles {
     display: flex;
     justify-content: center;
 }
 
-.controls button {
+.controles button {
     width: 50px;
     aspect-ratio: 1/1;
     margin: 20px;
@@ -78,19 +95,19 @@
     transition: all 0.1s linear;
 }
 
-.controls .controla:hover {
-    transform: scale(1.05);
+.controles .control:hover {
+    transform: scale(1.02);
 }
 
-.controls #iconcontrol:hover {
+.controles .iconoControl:hover {
     transform: scale(1.3);
 }
 
-.controls .controla {
+.controles .control {
     transform: scale(0.9);
 }
 
-.controls #iconcontrol {
+.controles .iconoControl {
     transform: scale(1.2);
 }
 

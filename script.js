@@ -1,99 +1,154 @@
-const songtitle= document.querySelector(".playlist h1");
-const artist = document.querySelector(".playlist p");
+const tituloCancion = document.querySelector('.reproductor-musica h1');
+const nombreArtista = document.querySelector('.reproductor-musica p');
 
-const progreso = document.getElementById("progress");
-const cancion = document.getElementById("cancion");
+const progreso = document.getElementById('progreso');
+const cancion = document.getElementById('cancion');
 
-const iconcontrol = document.getElementById("iconcontrol");
-const start = document.querySelector(".controls button.start");
+const iconoControl = document.getElementById('iconoControl');
+const botonReproducirPausar = document.querySelector('.controles button.boton-reproducir-pausar');
 
-const back = document.querySelector(".controls button.back");
-const next = document.querySelector(".controls button.next");
+const botonAtras = document.querySelector('.controles button.atras');
+const botonAdelante = document.querySelector('.controles button.adelante');
 
-const songs= [ 
+const canciones = [ 
     {
         titulo: "Sunny",
         nombre: "Luis Miguel",
-        fuente: "sunny.mp3",
+        fuente: "sunny.mp3"
     },
     {
         titulo: "Hate You",
         nombre: "Jungkook",
-        fuente: "hate.mp3",
+        fuente: "hate.mp3"
     },
     {
         titulo: "Pensar en ti",
         nombre: "Luis Miguel",
-        fuente: "pensar.mp3",
+        fuente: "pensar.mp3"
     },
     {
         titulo: "Glue song",
         nombre: "Beabadoobee",
-        fuente: "glue.mp3",
+        fuente: "glue.mp3"
     },
     {
         titulo: "Take a chance on me",
         nombre: "Abba",
-        fuente: "take.mp3",
+        fuente: "take.mp3"
     },
     {
         titulo: "Soy un perdedor",
         nombre: "Luis Miguel",
-        fuente: "perdedor.mp3",
+        fuente: "perdedor.mp3"
     },
     {
         titulo: "Decalcomania",
         nombre: "Jungkook",
-        fuente: "decalco.mp3",
+        fuente: "decalco.mp3"
     },
     {
         titulo: "Suave",
         nombre: "Luis Miguel",
-        fuente: "suave.mp3",
+        fuente: "suave.mp3"
     },
     {
         titulo: "Love me again",
         nombre: "V",
-        fuente: "love.mp3",
+        fuente: "love.mp3"
     },
     {
         titulo: "Devuélveme el amor",
         nombre: "Luis Miguel",
-        fuente: "amor.mp3",
+        fuente: "amor.mp3"
     },
     {
         titulo: "Still with you",
         nombre: "Jungkook",
-        fuente: "still.mp3",
+        fuente: "still.mp3"
     },
     {
         titulo: "La Incondicional",
         nombre: "Luis Miguel",
-        fuente: "incondicional.mp3",
+        fuente: "incondicional.mp3"
     },
     {
         titulo: "Once more to see you",
         nombre: "Mitski",
-        fuente: "once.mp3",
+        fuente: "once.mp3"
     },
     {
         titulo: "Oro de Ley",
         nombre: "Luis Miguel",
-        fuente: "oro.mp3",
+        fuente: "oro.mp3"
     },
         {
         titulo: "Sol, arena y mar",
         nombre: "Luis Miguel",
-        fuente: "sol.mp3",
+        fuente: "sol.mp3"
     },
 
 ]
 
-let actual = 0;
+let indiceCancionActual = 0;
 
-function updatesonginfo(){
-    songtitle.textContent = songs[actual].titulo;
-    artist.textContent = songs[actual].nombre;
+function actualizarInfoCancion(){
+    tituloCancion.textContent = canciones[indiceCancionActual].titulo;
+    nombreArtista.textContent = canciones[indiceCancionActual].nombre;
+    cancion.src = canciones[indiceCancionActual].fuente;
+    cancion.addEventListener('loadeddata',function(){});
 };
 
-updatesonginfo();
+cancion.addEventListener('loadedmetadata', function(){
+    progreso.max = cancion.duration;
+    progreso.value = cancion.currentTime;
+});
+
+botonReproducirPausar.addEventListener('click', reproducirPausar);
+
+function reproducirPausar(){
+    if(cancion.paused){
+        reproducirCancion();
+    } else {
+        pausarCancion();
+    }
+};
+
+function reproducirCancion(){
+    cancion.play();
+    inconoControl.classList.add('bi-pause-fill')
+    inconoControl.classList.remove('bi-play-fill')
+}
+
+function pausarCancion(){
+    cancion.pause();
+    inconoControl.classList.remove('bi-pause-fill')
+    inconoControl.classList.add('bi-play-fill')
+}
+
+cancion.addEventListener('timeupdate', function(){
+    if(!cancion.paused){
+        progreso.value = cancion.currentTime;
+    }
+});
+
+progreso.addEventListener('input', function(){
+    cancion.currentTime = progreso.value;
+});
+
+// progreso.addEventListener('change', ()=>{
+//     reproducirCancion();
+// });
+
+botonAdelante.addEventListener('click', function(){
+    indiceCancionActual = (indiceCancionActual + 1) % canciones.length;
+    actualizarInfoCancion();
+    reproducirCancion();
+});
+
+botonAtras.addEventListener('click', function(){
+    indiceCancionActual = (indiceCancionActual - 1 + canciones.length) % canciones.length;
+    actualizarInfoCancion();
+    reproducirCancion();
+});
+
+actualizarInfoCancion();
