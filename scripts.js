@@ -115,14 +115,14 @@ function reproducirPausar(){
 
 function reproducirCancion(){
     cancion.play();
-    inconoControl.classList.add('bi-pause-fill')
-    inconoControl.classList.remove('bi-play-fill')
+    iconoControl.classList.add('bi-pause-fill')
+    iconoControl.classList.remove('bi-play-fill')
 }
 
 function pausarCancion(){
     cancion.pause();
-    inconoControl.classList.remove('bi-pause-fill')
-    inconoControl.classList.add('bi-play-fill')
+    iconoControl.classList.remove('bi-pause-fill')
+    iconoControl.classList.add('bi-play-fill')
 }
 
 cancion.addEventListener('timeupdate', function(){
