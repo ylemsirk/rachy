@@ -18,7 +18,7 @@ body {
 #card {
     position: relative; /* clave para que el ::before no se salga */
     margin: 100px auto;
-    width: 600px;
+    width: 900px;
     background-image: url("realbackcard.png");
     border: 2px solid #ffffff;
     box-shadow: 4px 4px 0 #808080;
