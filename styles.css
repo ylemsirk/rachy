@@ -20,12 +20,23 @@ body {
     margin: 100px auto;
     width: 800px;
     background-image: url("realbackcard.png");
-	background-size: cover;
+    background-size: cover;
     border: 2px solid #ffffff;
     box-shadow: 4px 4px 0 #808080;
     font-family: 'Slackside One', sans-serif;
     z-index: 10;
     overflow: hidden; /* evita que el borde decorativo sobresalga */
+}
+
+#card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.833); /* capa negra semitransparente */
+    z-index: -2;
 }
 
 .reproductor-musica::before {
@@ -59,6 +70,7 @@ body {
     font-weight: bold;
     font-size: 0.9rem;
     font-family: Pixelify Sans, sans-serif;
+    cursor: none;
 }
 
 #card .botones-ventana {
@@ -81,6 +93,7 @@ body {
     font-family: Pixelify Sans;
 }
 
+
 #card .botones-ventana button:active {
     box-shadow: inset 2px 2px rgb(80, 80, 80);
     padding-bottom: 0px;
@@ -92,7 +105,7 @@ body {
     position: relative;
     padding: 40px;
     text-align: center;
-    z-index: -1; /* asegura que el texto quede por encima */
+    z-index: -2; /* asegura que el texto quede por encima */
 }
 
 .contenido-card::before {
