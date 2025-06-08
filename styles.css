@@ -12,25 +12,87 @@
 }
 
 body {
-    background: url("final.jpg");
-    background-attachment: fixed;
-    background-size: cover;
+    background: url("back.png");
 }
 
 #card {
-    font-family: "Slackside One", sans-serif;
-    max-width: 600px;
-    margin: 80px auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    color: #333;
-    text-align: center;
-    backdrop-filter: blur(5px); /* opcional para suavizar fondo */
-    -webkit-backdrop-filter: blur(5px); /* soporte para Safari */
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    width: 600px;
+    background-color: whitesmoke;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0 #808080;
+    font-family: 'Slackside One', sans-serif;
     z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+}
+
+
+/* Hereda de las otras ventanas */
+#card .barra-superior {
+    background: url("backcard.jpg");
+    background-size: 90px;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+#card .titulo-ventana {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+}
+
+#card .botones-ventana {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#card .botones-ventana button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126);
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#card .botones-ventana button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+/* Contenido interno de la tarjeta */
+.contenido-card {
     position: relative;
+    padding: 40px;
+    text-align: center;
+    z-index: -1; /* asegura que el texto quede por encima */
+}
+
+.contenido-card::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none; /* permite hacer clics normalmente */
 }
 
 .reproductor-musica {
@@ -147,7 +209,6 @@ body {
     background-color: #c0c0c0;
     border: 2px solid #000000;
     box-shadow: 3px 3px 0 #808080;
-    font-family: 'Courier New', Courier, monospace;
     z-index: 999;
 }
 

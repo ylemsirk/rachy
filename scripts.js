@@ -203,13 +203,3 @@ document.addEventListener('mousemove', (e) => {
         ventana.style.top = `${newY}px`;
     }
 });
-
-document.addEventListener('click', function reproduccionInicial() {
-    actualizarInfoCancion();
-    cancion.play();
-    iconoControl.classList.add('bi-pause-fill');
-    iconoControl.classList.remove('bi-play-fill');
-    // Elimina el listener para que no se repita
-    document.removeEventListener('click', reproduccionInicial);
-});
-
