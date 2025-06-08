@@ -152,3 +152,40 @@ botonAtras.addEventListener('click', function(){
 });
 
 actualizarInfoCancion();
+
+// Hacer la ventana arrastrable
+const ventana = document.querySelector('.ventana');
+const barraSuperior = document.querySelector('.barra-superior');
+
+let offsetX = 0;
+let offsetY = 0;
+let isArrastrando = false;
+
+barraSuperior.addEventListener('mousedown', (e) => {
+    isArrastrando = true;
+    offsetX = e.clientX - ventana.getBoundingClientRect().left;
+    offsetY = e.clientY - ventana.getBoundingClientRect().top;
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isArrastrando) {
+        ventana.style.left = `${e.clientX - offsetX}px`;
+        ventana.style.top = `${e.clientY - offsetY}px`;
+    }
+});
+
+document.addEventListener('mouseup', () => {
+    isArrastrando = false;
+});
+
+document.querySelector('.cerrar').addEventListener('click', () => {
+    ventana.style.display = 'none';
+});
+
+document.querySelector('.minimizar').addEventListener('click', () => {
+    document.querySelector('.reproductor-musica').style.display = 'none';
+});
+
+document.querySelector('.maximizar').addEventListener('click', () => {
+    document.querySelector('.reproductor-musica').style.display = 'flex';
+});
