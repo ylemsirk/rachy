@@ -1,5 +1,5 @@
-const titulo = document.querySelector(".playlist h1");
-const nombre = document.querySelector(".playlist p");
+const songtitle= document.querySelector(".playlist h1");
+const artist = document.querySelector(".playlist p");
 
 const progreso = document.getElementById("progress");
 const cancion = document.getElementById("cancion");
@@ -10,43 +10,43 @@ const start = document.querySelector(".controls button.start");
 const back = document.querySelector(".controls button.back");
 const next = document.querySelector(".controls button.next");
 
-const songs = [ 
-        {
+const songs= [ 
+    {
         titulo: "Sunny",
         nombre: "Luis Miguel",
         fuente: "sunny.mp3",
     },
-        {
+    {
         titulo: "Hate You",
         nombre: "Jungkook",
         fuente: "hate.mp3",
     },
-        {
+    {
         titulo: "Pensar en ti",
         nombre: "Luis Miguel",
         fuente: "pensar.mp3",
     },
-        {
+    {
         titulo: "Glue song",
         nombre: "Beabadoobee",
         fuente: "glue.mp3",
     },
-        {
+    {
         titulo: "Take a chance on me",
         nombre: "Abba",
         fuente: "take.mp3",
     },
-        {
+    {
         titulo: "Soy un perdedor",
         nombre: "Luis Miguel",
         fuente: "perdedor.mp3",
     },
-        {
+    {
         titulo: "Decalcomania",
         nombre: "Jungkook",
         fuente: "decalco.mp3",
     },
-        {
+    {
         titulo: "Suave",
         nombre: "Luis Miguel",
         fuente: "suave.mp3",
@@ -56,7 +56,7 @@ const songs = [
         nombre: "V",
         fuente: "love.mp3",
     },
-        {
+    {
         titulo: "Devuélveme el amor",
         nombre: "Luis Miguel",
         fuente: "amor.mp3",
@@ -66,17 +66,17 @@ const songs = [
         nombre: "Jungkook",
         fuente: "still.mp3",
     },
-        {
+    {
         titulo: "La Incondicional",
         nombre: "Luis Miguel",
         fuente: "incondicional.mp3",
     },
-        {
+    {
         titulo: "Once more to see you",
         nombre: "Mitski",
         fuente: "once.mp3",
     },
-        {
+    {
         titulo: "Oro de Ley",
         nombre: "Luis Miguel",
         fuente: "oro.mp3",
@@ -88,3 +88,12 @@ const songs = [
     },
 
 ]
+
+let actual = 0;
+
+function updatesonginfo(){
+    songtitle.textContent = songs[actual].titulo;
+    artist.textContent = songs[actual].nombre;
+};
+
+updatesonginfo();
