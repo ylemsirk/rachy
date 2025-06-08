@@ -186,3 +186,20 @@ document.querySelector('.minimizar').addEventListener('click', () => {
 document.querySelector('.maximizar').addEventListener('click', () => {
     document.querySelector('.reproductor-musica').style.display = 'flex';
 });
+
+document.addEventListener('mousemove', (e) => {
+    if (isArrastrando) {
+        const maxX = window.innerWidth - ventana.offsetWidth;
+        const maxY = window.innerHeight - ventana.offsetHeight;
+
+        let newX = e.clientX - offsetX;
+        let newY = e.clientY - offsetY;
+
+        // Limita el movimiento para que no se salga de la pantalla
+        newX = Math.max(0, Math.min(newX, maxX));
+        newY = Math.max(0, Math.min(newY, maxY));
+
+        ventana.style.left = `${newX}px`;
+        ventana.style.top = `${newY}px`;
+    }
+});
