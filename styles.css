@@ -20,6 +20,7 @@ body {
     margin: 100px auto;
     width: 900px;
     background-image: url("realbackcard.png");
+	background-size: cover;
     border: 2px solid #ffffff;
     box-shadow: 4px 4px 0 #808080;
     font-family: 'Slackside One', sans-serif;
