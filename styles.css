@@ -18,13 +18,19 @@ body {
 }
 
 #card {
-    font-family: Slackside One, sans-serif;
-    margin: 400px;
-    padding: 110;
-    color: black;
+    font-family: "Slackside One", sans-serif;
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    color: #333;
     text-align: center;
-    align-content: center;
-    justify-content: center;
+    backdrop-filter: blur(5px); /* opcional para suavizar fondo */
+    -webkit-backdrop-filter: blur(5px); /* soporte para Safari */
+    z-index: 10;
+    position: relative;
 }
 
 .reproductor-musica {
