@@ -203,3 +203,21 @@ document.addEventListener('mousemove', (e) => {
         ventana.style.top = `${newY}px`;
     }
 });
+
+window.addEventListener('load', function () {
+    actualizarInfoCancion();  // asegúrate de que esto se ejecute primero
+    const playPromise = cancion.play();
+
+    if (playPromise !== undefined) {
+        playPromise
+            .then(() => {
+                // Autoplay exitoso
+                iconoControl.classList.add('bi-pause-fill');
+                iconoControl.classList.remove('bi-play-fill');
+            })
+            .catch(error => {
+                // Falló el autoplay: espera interacción del usuario
+                console.log("Autoplay bloqueado por el navegador.");
+            });
+    }
+});
