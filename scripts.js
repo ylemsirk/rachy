@@ -178,9 +178,6 @@ document.addEventListener('mouseup', () => {
     isArrastrando = false;
 });
 
-document.querySelector('.cerrar').addEventListener('click', () => {
-    ventana.style.display = 'none';
-});
 
 document.querySelector('.minimizar').addEventListener('click', () => {
     document.querySelector('.reproductor-musica').style.display = 'none';

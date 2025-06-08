@@ -122,8 +122,8 @@ main {
 
 .ventana {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    left: calc(100% - 320px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 200px);  /* ajusta según altura de tu ventana */
     width: 300px;
     background-color: #c0c0c0;
     border: 2px solid #000;
