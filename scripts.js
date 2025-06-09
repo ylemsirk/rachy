@@ -262,3 +262,41 @@ document.addEventListener("DOMContentLoaded", () => {
     isDragging = false;
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ventana = document.querySelector(".ventana2");
+  const barra = ventana.querySelector(".barra-superior2");
+  const minimizarBtn = ventana.querySelector(".minimizar2");
+  const maximizarBtn = ventana.querySelector(".maximizar2");
+  const contenido = ventana.querySelector(".ventana2-content");
+
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  // ---- DRAG ----
+  barra.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    const rect = ventana.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+    ventana.style.position = "absolute";
+    ventana.style.zIndex = 1000;
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+      ventana.style.left = `${e.clientX - offsetX}px`;
+      ventana.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
+
+  // ---- MINIMIZAR ----
+  minimizarBtn.addEventListener("click", () => {
+    contenido.style.display = "none";
+  });
+
+  // ---- MAXIMIZAR / RESTAURAR ----
