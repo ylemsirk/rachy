@@ -643,6 +643,8 @@ main {
   border: 2px solid black;
   box-shadow: 4px 4px black;
   font-family: "Pixelify Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 .popup-demon .barra-p2 {
@@ -692,6 +694,8 @@ main {
 .popup-demon #f1-content img {
   width: 700px;
   height: auto;
+  flex-grow: 1;
+  display: flex;
 }
 
 .oculto {
