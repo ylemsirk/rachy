@@ -638,7 +638,7 @@ main {
 }
 
 .popup-demon .demon-window {
-  width: 700px; /* Puedes ajustar si quieres que sea más grande */
+  width: 850px; /* Puedes ajustar si quieres que sea más grande */
   height: auto;
   border: 2px solid black;
   box-shadow: 4px 4px black;
@@ -683,10 +683,6 @@ main {
 
 .popup-demon #f1-content img {
   width: 1000px;
-  height: auto;
-  flex-grow: 1;
-  display: flex;
-  object-fit: cover;
 }
 
 .oculto {
