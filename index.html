@@ -21,6 +21,76 @@
 			<h1>Canción dedicada del día de hoy:</h1>
 			<p>Luis Miguel - Sunny</p><img src="rat.gif" id="rat" width="50px"><img src="disk.gif" id="disk" width="45px">
 		</section>
+		<script>
+		  const ventana2 = document.querySelector('.ventana2');
+		  const barra2 = ventana2.querySelector('.barra-superior2');
+		  const minimizarBtn2 = ventana2.querySelector('.minimizar2');
+		  const maximizarBtn2 = ventana2.querySelector('.maximizar2');
+		  const cerrarBtn2 = ventana2.querySelector('.cerrar2');
+		  const contenido2 = ventana2.querySelector('.ventana2-content');
+
+		  let isDragging = false;
+		  let offsetX, offsetY;
+		  let isMaximized = false;
+		  let prevPosition = {};
+
+		  // DRAG
+		  barra2.addEventListener('mousedown', (e) => {
+			if (e.target.closest('.botones-ventana2')) return; // No iniciar arrastre si se hace clic en un botón
+			isDragging = true;
+			offsetX = e.clientX - ventana2.offsetLeft;
+			offsetY = e.clientY - ventana2.offsetTop;
+			ventana2.style.zIndex = 9999; // Traer al frente
+		  });
+
+		  document.addEventListener('mousemove', (e) => {
+			if (!isDragging) return;
+			ventana2.style.left = `${e.clientX - offsetX}px`;
+			ventana2.style.top = `${e.clientY - offsetY}px`;
+		  });
+
+		  document.addEventListener('mouseup', () => {
+			isDragging = false;
+		  });
+
+		  // MINIMIZAR
+		  minimizarBtn2.addEventListener('click', () => {
+			contenido2.style.display = contenido2.style.display === 'none' ? 'block' : 'none';
+		  });
+
+		  // MAXIMIZAR / RESTAURAR
+		  maximizarBtn2.addEventListener('click', () => {
+			if (!isMaximized) {
+			  prevPosition = {
+				top: ventana2.style.top,
+				left: ventana2.style.left,
+				width: ventana2.style.width,
+				height: ventana2.style.height
+			  };
+			  ventana2.style.top = '0';
+			  ventana2.style.left = '0';
+			  ventana2.style.width = '100vw';
+			  ventana2.style.height = '100vh';
+			  contenido2.style.height = 'calc(100% - 30px)';
+			  contenido2.style.overflow = 'auto';
+			  isMaximized = true;
+			} else {
+			  ventana2.style.top = prevPosition.top;
+			  ventana2.style.left = prevPosition.left;
+			  ventana2.style.width = prevPosition.width;
+			  ventana2.style.height = 'auto';
+			  contenido2.style.height = 'auto';
+			  contenido2.style.overflow = 'unset';
+			  isMaximized = false;
+			}
+		  });
+
+		  // CERRAR
+		  cerrarBtn2.addEventListener('click', () => {
+			ventana2.style.display = 'none';
+		  });
+		</script>
+
         </div>
 		<div class="ventana">
 			<div class="barra-superior">
