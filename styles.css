@@ -632,10 +632,7 @@ main {
   align-items: center;
 }
 
-.popup-demon img {
-  width:700px;
-  height: auto;
-}
+
 
 .popup-demon .demon-window {
   width: 700px; /* Puedes ajustar si quieres que sea más grande */
