@@ -204,68 +204,6 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-// Referencias
-const ventana2 = document.querySelector('.ventana2');
-const barra2 = ventana2.querySelector('.barra-superior2');
-const minimizarBtn = ventana2.querySelector('.minimizar');
-const maximizarBtn = ventana2.querySelector('.maximizar2');
-
-let isDragging = false;
-let offsetX, offsetY;
-let maximizada = false;
-let posicionAnterior = { top: 0, left: 0, width: '', height: '' };
-
-// 🔄 Minimizar
-minimizarBtn.addEventListener('click', () => {
-  const contenido = ventana2.querySelector('.contenido-ventana2') || ventana2.querySelector(':scope > :not(.barra-superior2)');
-  if (contenido) {
-    contenido.style.display = contenido.style.display === 'none' ? 'block' : 'none';
-  }
-});
-
-// ⛶ Maximizar
-maximizarBtn.addEventListener('click', () => {
-  if (!maximizada) {
-    // Guardar posición y tamaño
-    posicionAnterior.top = ventana2.offsetTop;
-    posicionAnterior.left = ventana2.offsetLeft;
-    posicionAnterior.width = ventana2.style.width;
-    posicionAnterior.height = ventana2.style.height;
-
-    // Maximizar
-    ventana2.style.top = '0';
-    ventana2.style.left = '0';
-    ventana2.style.width = '100vw';
-    ventana2.style.height = '100vh';
-    ventana2.style.zIndex = 999;
-  } else {
-    // Restaurar
-    ventana2.style.top = posicionAnterior.top + 'px';
-    ventana2.style.left = posicionAnterior.left + 'px';
-    ventana2.style.width = posicionAnterior.width;
-    ventana2.style.height = posicionAnterior.height;
-  }
-  maximizada = !maximizada;
-});
-
-// 🖱️ Arrastrar
-barra2.addEventListener('mousedown', (e) => {
-  if (maximizada) return; // No permitir mover si está maximizada
-  isDragging = true;
-  offsetX = e.clientX - ventana2.offsetLeft;
-  offsetY = e.clientY - ventana2.offsetTop;
-  ventana2.style.zIndex = 999; // Traer al frente
-});
-
-document.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  ventana2.style.left = (e.clientX - offsetX) + 'px';
-  ventana2.style.top = (e.clientY - offsetY) + 'px';
-});
-
-document.addEventListener('mouseup', () => {
-  isDragging = false;
-});
 
 
 document.addEventListener("DOMContentLoaded", () => {
