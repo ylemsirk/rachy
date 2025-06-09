@@ -14,14 +14,21 @@
 
 }
 
+@keyframes moverfondo {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0; /* O más, según cuánto quieras mover */
+  }
+}
+
 body {
     background: url("back.png");
     background-attachment: fixed;
     background-repeat: repeat;
-    background-size: auto;
-    animation: moverfondo 30s linear 0s infinite normal none running;
+    animation: moverfondo 40s linear 0s infinite normal none running;
 }
-
 main {
     font-size: 18px;
     line-height: 30px;
