@@ -640,7 +640,7 @@ main {
 .popup-demon .demon-window {
   width: 700px; /* Puedes ajustar si quieres que sea más grande */
   height: auto;
-  background-color: silver;
+  background-image: url("satan.gif");
   border: 2px solid black;
   box-shadow: 4px 4px black;
   font-family: "Pixelify Sans", sans-serif;
