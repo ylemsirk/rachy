@@ -204,7 +204,7 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-<script>
+
   const ventana2 = document.getElementById('ventana2');
   const barra2 = document.getElementById('barra2');
   const minimizar2 = document.querySelector('.minimizar2');
@@ -251,7 +251,7 @@ document.addEventListener('mousemove', (e) => {
   cerrar2.addEventListener('click', () => {
     ventana2.style.display = 'none';
   });
-</script>
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
