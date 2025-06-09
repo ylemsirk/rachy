@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const rect = ventana.getBoundingClientRect();
     offsetX = e.clientX - rect.left;
     offsetY = e.clientY - rect.top;
-    ventana.style.position = "absolute";
+    ventana.style.position = "fixed";
     ventana.style.zIndex = 1000; // Asegura que esté al frente
   });
 
