@@ -270,3 +270,23 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelector('.maximizar2').addEventListener('click', () => {
     document.querySelector('.ventana2-content').style.display = 'block';
 });
+
+
+const botonRechazar = document.getElementById('rechazar');
+const knockSound = document.getElementById('knock-sound');
+const popupDemon = document.getElementById('popup-demon');
+
+botonRechazar.addEventListener('click', () => {
+// Mostrar popup
+popupDemon.classList.remove('oculto');
+
+// Reproducir sonido
+knockSound.currentTime = 0;
+knockSound.play();
+
+// Ocultar popup cuando termine el audio
+knockSound.onended = () => {
+  popupDemon.classList.add('oculto');
+};
+});
+

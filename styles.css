@@ -13,7 +13,6 @@
     justify-content: center;
 
 }
-
 @keyframes moverfondo {
   0% {
     background-position: 0 0;
@@ -29,6 +28,7 @@ body {
     background-repeat: repeat;
     animation: moverfondo 40s linear 0s infinite normal none running;
 }
+
 main {
     font-size: 18px;
     line-height: 30px;
@@ -40,6 +40,7 @@ main {
     color: rgb(0, 137, 168);
     width: 800px;
     background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
     background-size: cover;
     border: 2px solid #ffffff;
     box-shadow: 4px 4px 0 #808080;
@@ -504,4 +505,78 @@ main {
 
 #confeti-container p{
     color: rgba(128, 128, 128, 0.468);
+}
+
+#aceptar {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(52, 52, 52), inset 0.7px 2px rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+}
+#aceptar .contenido-boton {
+    font-family: Pixelify Sans, sans-serif;
+}
+#aceptar:active .contenido-boton {
+    transform: translate(1px, 1px);
+}
+
+#aceptar:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+}
+
+#rechazar {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(52, 52, 52), inset 0.7px 2px rgb(255, 255, 255);
+    border: 1px solid #ffffff;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+}
+#rechazar .contenido-boton {
+    font-family: Pixelify Sans, sans-serif;
+}
+#rechazar:active .contenido-boton {
+    transform: translate(1px, 1px);
+}
+
+#rechazar:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+}
+
+.botones {
+    display: flex;
+    gap: 40px; /* Espacio entre botones, ajusta si quieres más/menos */
+}
+
+.popup-demon {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-demon img {
+  width: 200px; /* ajusta tamaño si lo deseas */
+  height: auto;
+}
+
+.oculto {
+  display: none;
 }
