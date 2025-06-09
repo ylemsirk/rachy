@@ -36,6 +36,10 @@ main {
     overflow: hidden; /* evita que el borde decorativo sobresalga */
 }
 
+#card h1 {
+    color: rgb(0, 100, 162);
+}
+
 #card::before {
     content: '';
     position: absolute;
@@ -383,4 +387,22 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#boton-confeti {
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 40%;
+
+}
+#boton-confeti img{
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#confeti-container p{
+    color: rgba(128, 128, 128, 0.468);
 }
