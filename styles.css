@@ -656,7 +656,7 @@ main {
 .popup-demon .p1-v {
   font-weight: bold;
   font-size: 14px;
-  background-image: url("satan.gif");
+  background: url("satan.gif");
   background-position: center;
 }
 
