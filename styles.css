@@ -652,7 +652,7 @@ main {
   align-items: center;
   background: url("satan.gif");
   background-repeat: repeat;
-  height: 40px; /* Fija altura de la barra */
+  height: 60px; /* Fija altura de la barra */
 }
 
 .popup-demon #f1-content {
