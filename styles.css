@@ -657,6 +657,9 @@ main {
   font-weight: bold;
   font-size: 14px;
   background: url("satan.gif");
+  font-family: Pixelify Sans, sans-serif;
+  background-width: 30px;
+  background-repeat: repeat;
 }
 
 .popup-demon .p1-b button {
