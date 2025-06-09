@@ -681,10 +681,14 @@ main {
     padding-bottom: 0;
 }
 
-.popup-demon #f1-content img {
-  width: 1000px;
+.popup-demon #f1-content {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
 }
 
-.oculto {
-  display: none;
+.popup-demon #f1-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
