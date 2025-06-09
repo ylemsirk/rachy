@@ -204,6 +204,54 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
+<script>
+  const ventana2 = document.getElementById('ventana2');
+  const barra2 = document.getElementById('barra2');
+  const minimizar2 = document.querySelector('.minimizar2');
+  const maximizar2 = document.querySelector('.maximizar2');
+  const cerrar2 = document.querySelector('.cerrar2');
+
+  // 🖱️ Arrastrar la ventana
+  let offsetX, offsetY, isDragging = false;
+
+  barra2.addEventListener('mousedown', (e) => {
+    if (e.target.tagName === 'BUTTON') return; // No arrastrar si se hace clic en botón
+    isDragging = true;
+    offsetX = e.clientX - ventana2.offsetLeft;
+    offsetY = e.clientY - ventana2.offsetTop;
+    ventana2.style.zIndex = parseInt(ventana2.style.zIndex || 1000) + 1;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (isDragging && !ventana2.classList.contains('maximizada')) {
+      ventana2.style.left = `${e.clientX - offsetX}px`;
+      ventana2.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', () => isDragging = false);
+
+  // 🔘 Minimizar
+  minimizar2.addEventListener('click', () => {
+    ventana2.classList.toggle('minimizada');
+  });
+
+  // 🔲 Maximizar / Restaurar
+  maximizar2.addEventListener('click', () => {
+    ventana2.classList.toggle('maximizada');
+    if (!ventana2.classList.contains('maximizada')) {
+      ventana2.style.left = '300px';
+      ventana2.style.top = '200px';
+      ventana2.style.width = '300px';
+      ventana2.style.height = 'auto';
+    }
+  });
+
+  // ❌ Cerrar
+  cerrar2.addEventListener('click', () => {
+    ventana2.style.display = 'none';
+  });
+</script>
 
 
 document.addEventListener("DOMContentLoaded", () => {
