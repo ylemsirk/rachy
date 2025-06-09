@@ -643,6 +643,10 @@ main {
   border: 2px solid black;
   box-shadow: 4px 4px black;
   font-family: "Pixelify Sans", sans-serif;
+  background-image: url("satan.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .popup-demon .barra-p1 {
