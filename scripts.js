@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
       first4.classList.add('oculto');
 
       // Reactivar botones internos
-      first4.forEach(btn => btn.disabled = false);
+      botonesInternos.forEach(btn => btn.disabled = false);
     };
   });
 });
