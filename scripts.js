@@ -290,19 +290,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reproducir sonido
     knockSound.currentTime = 0;
     knockSound.play();
-	cancion.pause = true;
 
     knockSound.onended = () => {
       // Ocultar popup
       popupDemon.classList.add('oculto');
-	  reproductor.play = true;
-	};
 
       // Reactivar botones internos
       botonesInternos.forEach(btn => btn.disabled = false);
-    });
+    };
+  });
 });
-
 
 
 
