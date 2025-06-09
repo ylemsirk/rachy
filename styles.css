@@ -330,7 +330,7 @@ main {
 .ventana2 {
     position: fixed;
     left: calc(100% - 320px); /* 300px de ancho + margen de seguridad */
-    top: calc(100% - 400px);  /* ajusta según altura de tu ventana */
+    top: calc(100% - 600px);  /* ajusta según altura de tu ventana */
     width: 260px;
     background-image: url("photosback.gif");
     border: 2px solid #ffffff;
