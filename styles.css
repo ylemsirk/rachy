@@ -630,11 +630,53 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
 }
 
 .popup-demon img {
   width:700px;
+  height: auto;
+}
+
+.popup-demon .demon-window {
+  width: 700px; /* Puedes ajustar si quieres que sea más grande */
+  height: auto;
+  background-color: silver;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.popup-demon .barra-p1 {
+  background-color: navy;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-demon .p1-v {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.popup-demon .p1-b button {
+  background-color: gray;
+  border: none;
+  margin-left: 3px;
+  width: 20px;
+  height: 20px;
+  cursor: default;
+  font-weight: bold;
+}
+
+.popup-demon #f1-content {
+  padding: 0px;
+  text-align: center;
+}
+
+.popup-demon #f1-content img {
+  width: 700px;
   height: auto;
 }
 
