@@ -301,5 +301,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const botonAceptar = document.getElementById('aceptar');
+  const yaySound = document.getElementById('yay-sound');
+  const first4 = document.getElementById('first-photo4');
+
+  const contenedorBotones = document.querySelector('.botones'); // tu contenedor
+  const botonesInternos = contenedorBotones.querySelectorAll('button'); // todos los botones internos
+
+  botonAceptar.addEventListener('click', () => {
+    // Mostrar popup
+    first4.classList.remove('oculto');
+
+    // Desactivar botones internos
+    botonesInternos.forEach(btn => btn.disabled = true);
+
+    // Reproducir sonido
+    yaySound.currentTime = 0;
+    yaySound.play();
+
+    yaySound.onended = () => {
+      // Ocultar popup
+      first4.classList.add('oculto');
+
+      // Reactivar botones internos
+      first4.forEach(btn => btn.disabled = false);
+    };
+  });
+});
+
 
 
