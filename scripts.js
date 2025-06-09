@@ -301,4 +301,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const knockSound = new Audio("knock.mp3");
+const reproductor = document.getElementById("cancion");
+
+function reproducirKnock() {
+// Mutear la música
+	reproductor.muted = true;
+
+// Reproducir el sonido
+	knockSound.play();
+
+// Cuando termine, desmutear
+	knockSound.onended = () => {
+		reproductor.muted = false;
+	};	
+}
 
