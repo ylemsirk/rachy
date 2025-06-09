@@ -290,30 +290,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reproducir sonido
     knockSound.currentTime = 0;
     knockSound.play();
+	cancion.pause = true;
 
     knockSound.onended = () => {
       // Ocultar popup
       popupDemon.classList.add('oculto');
+	  reproductor.play = true;
+	};
 
       // Reactivar botones internos
       botonesInternos.forEach(btn => btn.disabled = false);
-    };
-  });
+    });
 });
 
-const knockSound = new Audio("knock.mp3");
-const reproductor = document.getElementById("cancion");
 
-function reproducirKnock() {
-// Mutear la música
-	reproductor.pause = true;
 
-// Reproducir el sonido
-	knockSound.play();
-
-// Cuando termine, desmutear
-	knockSound.onended = () => {
-		reproductor.muted = false;
-	};	
-}
 
