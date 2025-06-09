@@ -203,3 +203,28 @@ document.addEventListener('mousemove', (e) => {
         ventana.style.top = `${newY}px`;
     }
 });
+
+document.getElementById("boton-confeti").addEventListener("click", () => {
+    const gifContainer = document.getElementById("gif-confeti");
+    const sonido = document.getElementById("sonido-confeti");
+
+    // Crea el GIF
+    const gif = document.createElement("img");
+    gif.src = "confeti.gif";
+    gif.alt = "Confeti animado";
+    gif.style.width = "100px";
+
+    // Añade el gif al contenedor
+    gifContainer.innerHTML = ""; // limpia por si acaso
+    gifContainer.appendChild(gif);
+
+    // Reproduce el sonido
+    sonido.currentTime = 0;
+    sonido.play();
+
+    // Elimina el GIF después de 2.5 segundos
+    setTimeout(() => {
+        gif.remove();
+    }, 2500); // puedes ajustar este tiempo según la duración real del GIF
+});
+
