@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const knockSound = document.getElementById('knock-sound');
   const popupDemon = document.getElementById('popup-demon');
 
-  const contenedorBotones = document.querySelector('.first-photo2'); // tu contenedor
+  const contenedorBotones = document.querySelector('.body'); // tu contenedor
   const botonesInternos = contenedorBotones.querySelectorAll('button'); // todos los botones internos
 
   botonRechazar.addEventListener('click', () => {
