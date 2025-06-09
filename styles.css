@@ -671,10 +671,6 @@ main {
   margin: 0px;
 }
 
-.oculto {
-    display: none;
-}
-
 #first-photo4 {
     position: relative;
     margin: 40px auto;
@@ -748,4 +744,8 @@ main {
     max-width: 102%;
     height: auto;
     border: 1px solid white;
+}
+
+.oculto {
+    display: none;
 }
