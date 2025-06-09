@@ -638,8 +638,8 @@ main {
 }
 
 .popup-demon .demon-window {
-  width: 850px; /* Puedes ajustar si quieres que sea más grande */
-  height: auto;
+  width: 750px; /* Puedes ajustar si quieres que sea más grande */
+  height: 500;
   border: 2px solid black;
   box-shadow: 4px 4px black;
   font-family: "Pixelify Sans", sans-serif;
