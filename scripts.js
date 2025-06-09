@@ -272,21 +272,33 @@ document.querySelector('.maximizar2').addEventListener('click', () => {
 });
 
 
-const botonRechazar = document.getElementById('rechazar');
-const knockSound = document.getElementById('knock-sound');
-const popupDemon = document.getElementById('popup-demon');
+document.addEventListener('DOMContentLoaded', () => {
+  const botonRechazar = document.getElementById('rechazar');
+  const knockSound = document.getElementById('knock-sound');
+  const popupDemon = document.getElementById('popup-demon');
 
-botonRechazar.addEventListener('click', () => {
+  const contenedorBotones = document.querySelector('.first-photo2'); // tu contenedor
+  const botonesInternos = contenedorBotones.querySelectorAll('button'); // todos los botones internos
+
+  botonRechazar.addEventListener('click', () => {
     // Mostrar popup
     popupDemon.classList.remove('oculto');
+
+    // Desactivar botones internos
+    botonesInternos.forEach(btn => btn.disabled = true);
 
     // Reproducir sonido
     knockSound.currentTime = 0;
     knockSound.play();
 
-// Ocultar popup cuando termine el audio
     knockSound.onended = () => {
-        popupDemon.classList.add('oculto');
+      // Ocultar popup
+      popupDemon.classList.add('oculto');
+
+      // Reactivar botones internos
+      botonesInternos.forEach(btn => btn.disabled = false);
     };
+  });
 });
+
 
