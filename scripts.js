@@ -306,7 +306,7 @@ const reproductor = document.getElementById("cancion");
 
 function reproducirKnock() {
 // Mutear la música
-	reproductor.muted = true;
+	reproductor.pause = true;
 
 // Reproducir el sonido
 	knockSound.play();
