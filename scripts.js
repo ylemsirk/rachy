@@ -263,7 +263,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
- // ---- MINIMIZAR ----
-  minimizarBtn.addEventListener("click", () => {
-    contenido.style.display = "none";
-  });
+ document.querySelector('.minimizar2').addEventListener('click', () => {
+    document.querySelector('.ventana2-content').style.display = 'none';
+});
+
+document.querySelector('.maximizar2').addEventListener('click', () => {
+    document.querySelector('.ventana2-content').style.display = 'flex';
+});
