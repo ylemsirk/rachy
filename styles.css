@@ -268,21 +268,16 @@ main {
 }
 
 .ventana2 #disk{
-    margin-left: 162px;
-    align-content: right;
-    justify-content: right;
-    align-items: right;
-    justify-items: right;
-    text-align: right;
+    margin-left: 156px;
+    padding: 0px;
+    align-content: flex-start;
+    justify-content: flex-end;
 }
 .ventana2 #rat{
-    margin-bottom: 0px;
-    margin-top: 0px;
-    align-content: right;
-    justify-content: right;
-    align-items: right;
-    justify-items: right;
-    text-align: right;
+    margin-left: 5px;
+    padding: 0px;
+    align-content: flex-start;
+    justify-content: flex-end;
 }
 
 
@@ -341,7 +336,7 @@ main {
     background-size: 90px;
 }
 .ventana2-content {
-	display: flex;
+	display: block;
     flex-direction: column;
 }
 
