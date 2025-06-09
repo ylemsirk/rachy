@@ -645,6 +645,8 @@ main {
   font-family: "Pixelify Sans", sans-serif;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* para evitar scroll inesperado */
+  background-color: red;
 }
 
 .popup-demon .barra-p2 {
