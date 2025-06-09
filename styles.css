@@ -626,73 +626,52 @@ main {
   transform: translate(-50%, -50%);
   z-index: 9999;
   background-color: transparent;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.popup-demon img {
-  width:700px;
-  height: auto;
-}
-
 .popup-demon .demon-window {
-  width: 750px; /* Puedes ajustar si quieres que sea más grande */
-  height: 500;
+  width: 260px; /* Puedes ajustar si quieres que sea más grande */
+  height: auto;
+  background-color: silver;
   border: 2px solid black;
   box-shadow: 4px 4px black;
   font-family: "Pixelify Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* para evitar scroll inesperado */
-  background-color: red;
 }
 
-.popup-demon .barra-p2 {
+.popup-demon .barra-p1 {
+  background-color: navy;
   color: white;
   padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url("satan.gif");
-  background-repeat: repeat;
 }
 
-.popup-demon .p2-v {
+.popup-demon .p1-v {
   font-weight: bold;
   font-size: 14px;
-  font-family: Pixelify Sans, sans-serif;
 }
 
-.popup-demon .p2-b button {
-    background-color: rgb(188, 0, 0);
-    box-shadow: inset -3px -3px rgb(92, 0, 0), inset 3px 3px rgb(255, 0, 0);
-    border: 1px solid #000;
-    width: 20px;
-    height: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.75rem;
-    padding-bottom: 2px;
-    padding-right: 2px;
-}
-
-.popup-demon .p2-b button:active {
-    box-shadow: inset 2px 2px rgb(92, 0, 0);
-    padding-bottom: 0;
+.popup-demon .p1-b button {
+  background-color: gray;
+  border: none;
+  margin-left: 3px;
+  width: 20px;
+  height: 20px;
+  cursor: default;
+  font-weight: bold;
 }
 
 .popup-demon #f1-content {
-  flex-grow: 1;
-  height: 100%;
-  display: flex;
+  padding: 10px;
+  text-align: center;
 }
 
 .popup-demon #f1-content img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .oculto {
