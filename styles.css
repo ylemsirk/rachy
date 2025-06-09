@@ -521,7 +521,7 @@ main {
       /* Añade un poco de margen interno */
 }
 
-#first-photo2  .barra-p1 {
+#first-photo2 .barra-p1 {
     background: url("idk-back.gif");
     background-size: cover;
     background-position: center;
@@ -533,13 +533,32 @@ main {
     align-items: center;
 }
 
-#first-photo2  .p1-v {
+#first-photo2 .p1-v {
     font-weight: bold;
     font-size: 0.9rem;
     font-family: "Pixelify Sans", sans-serif;
     text-align: left;           /* Cambia a 'left' */
     flex-grow: 1;
     padding-left: 8px;          /* Añade un poco de margen interno */
+}
+
+#first-photo2 .p1-b {
+    display: flex;
+    gap: 2px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+#first-photo2 .p1-b button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126);
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
 }
 
 #aceptar {
