@@ -210,23 +210,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const sonido = document.getElementById("sonido-confeti");
 
   boton.addEventListener("click", () => {
+    // Borra contenido anterior por si acaso
+    gifContainer.innerHTML = "";
+
     // Crea el GIF
     const gif = document.createElement("img");
     gif.src = "confeti.gif";
     gif.alt = "Confeti animado";
-    gif.style.width = "100px";
 
-    // Añade el gif al contenedor
-    gifContainer.innerHTML = "";
+    // Inserta el GIF y lo muestra
     gifContainer.appendChild(gif);
+    gifContainer.style.display = "block";
 
     // Reproduce el sonido
     sonido.currentTime = 0;
     sonido.play();
 
-    // Elimina el gif después de 2.5 segundos
+    // Oculta el GIF luego de 2.5 segundos
     setTimeout(() => {
-      gif.remove();
-    }, 1000);
+      gifContainer.style.display = "none";
+      gifContainer.innerHTML = "";
+    }, 1500);
   });
 });
+
