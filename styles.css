@@ -652,7 +652,6 @@ main {
   justify-content: space-between;
   align-items: center;
   background: url("satan.gif");
-  background-width: 30px;
   background-repeat: repeat;
 }
 
@@ -663,7 +662,7 @@ main {
   font-family: Pixelify Sans, sans-serif;
 }
 
-.popup-demon .p1-b button {
+.popup-demon .p2-b button {
   background-color: gray;
   border: none;
   margin-left: 3px;
@@ -672,10 +671,22 @@ main {
   cursor: default;
   font-weight: bold;
 }
+.popup-demon .p2-b button {
+    background-color: rgb(188, 0, 0);
+    box-shadow: inset -3px -3px rgb(92, 0, 0), inset 3px 3px rgb(255, 0, 0);
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
 
-.popup-demon #f1-content {
-  padding: 0px;
-  text-align: center;
+.popup-demon .p2-b button:active {
+    box-shadow: inset 2px 2px rgb(92, 0, 0);
+    padding-bottom: 0;
 }
 
 .popup-demon #f1-content img {
