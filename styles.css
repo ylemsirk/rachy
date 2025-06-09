@@ -623,18 +623,23 @@ main {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -10%);
   z-index: 9999;
+  background-color: transparent;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.popup-demon img {
+  width:700px;
+  height: auto;
+}
+
 .popup-demon .demon-window {
   width: 700px; /* Puedes ajustar si quieres que sea más grande */
   height: auto;
-  box-shadow: 4px 4px black;
   font-family: "Pixelify Sans", sans-serif;
 }
 
@@ -646,20 +651,26 @@ main {
   align-items: center;
   background: url("satan.gif");
   background-repeat: repeat;
+  margin-left: 21px;
+  margin-right: 20px;
+  margin-bottom: -21px;
 }
 
 .popup-demon .p2-v {
   font-weight: bold;
   font-size: 14px;
   font-family: Pixelify Sans, sans-serif;
+  border: 2px solid black;
+  box-shadow: 4px 4px black;
 }
 
-.popup-demon #f1-content img {
+#f1-content img {
   width: 700px;
+  height: auto;
   padding: 0px;
   margin: 0px;
 }
 
 .oculto {
-  display: none;
+    display: none;
 }
