@@ -203,7 +203,12 @@ document.addEventListener('mousemove', (e) => {
         ventana.style.top = `${newY}px`;
     }
 });
-
+// Aplicar a ventana2
+const ventana2 = document.querySelector('.ventana2');
+if (ventana2) {
+  hacerArrastrable(ventana2);
+  configurarBotonesVentana(ventana2);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("boton-confeti");
