@@ -306,9 +306,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const yaySound = document.getElementById('yay-sound');
   const first4 = document.getElementById('first-photo4');
 
-  const contenedorBotones = document.querySelector('.botones'); // tu contenedor
-  const botonesInternos = contenedorBotones.querySelectorAll('button'); // todos los botones internos
+  const contenedorBotones = document.querySelector('.botones');
+  const botonesInternos = contenedorBotones.querySelectorAll('button');
 
+  // Manejar el click
   botonAceptar.addEventListener('click', () => {
     // Mostrar popup
     first4.classList.remove('oculto');
@@ -319,16 +320,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reproducir sonido
     yaySound.currentTime = 0;
     yaySound.play();
+  });
 
-    yaySound.onended = () => {
-      // Ocultar popup
-      first4.classList.add('oculto');
+  // Manejar el fin del sonido (solo una vez, desde el inicio)
+  yaySound.addEventListener('ended', () => {
+    // Ocultar popup
+    first4.classList.add('oculto');
 
-      // Reactivar botones internos
-      botonesInternos.forEach(btn => btn.disabled = false);
-    };
+    // Reactivar botones internos
+    botonesInternos.forEach(btn => btn.disabled = false);
   });
 });
+
 
 
 
