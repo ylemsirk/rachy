@@ -625,19 +625,15 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  background-color: red;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-
 .popup-demon .demon-window {
   width: 700px; /* Puedes ajustar si quieres que sea más grande */
   height: auto;
-  border: 2px solid black;
   box-shadow: 4px 4px black;
   font-family: "Pixelify Sans", sans-serif;
 }
@@ -660,7 +656,6 @@ main {
 
 .popup-demon #f1-content img {
   width: 700px;
-  height: auto;
   padding: 0px;
   margin: 0px;
 }
