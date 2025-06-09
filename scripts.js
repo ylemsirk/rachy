@@ -204,10 +204,12 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
-document.getElementById("boton-confeti").addEventListener("click", () => {
-    const gifContainer = document.getElementById("gif-confeti");
-    const sonido = document.getElementById("sonido-confeti");
+document.addEventListener("DOMContentLoaded", () => {
+  const boton = document.getElementById("boton-confeti");
+  const gifContainer = document.getElementById("gif-confeti");
+  const sonido = document.getElementById("sonido-confeti");
 
+  boton.addEventListener("click", () => {
     // Crea el GIF
     const gif = document.createElement("img");
     gif.src = "confeti.gif";
@@ -215,16 +217,16 @@ document.getElementById("boton-confeti").addEventListener("click", () => {
     gif.style.width = "100px";
 
     // Añade el gif al contenedor
-    gifContainer.innerHTML = ""; // limpia por si acaso
+    gifContainer.innerHTML = "";
     gifContainer.appendChild(gif);
 
     // Reproduce el sonido
     sonido.currentTime = 0;
     sonido.play();
 
-    // Elimina el GIF después de 2.5 segundos
+    // Elimina el gif después de 2.5 segundos
     setTimeout(() => {
-        gif.remove();
-    }, 2500); // puedes ajustar este tiempo según la duración real del GIF
+      gif.remove();
+    }, 1000);
+  });
 });
-
