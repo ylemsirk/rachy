@@ -277,16 +277,16 @@ const knockSound = document.getElementById('knock-sound');
 const popupDemon = document.getElementById('popup-demon');
 
 botonRechazar.addEventListener('click', () => {
-// Mostrar popup
-popupDemon.classList.remove('oculto');
+    // Mostrar popup
+    popupDemon.classList.remove('oculto');
 
-// Reproducir sonido
-knockSound.currentTime = 0;
-knockSound.play();
+    // Reproducir sonido
+    knockSound.currentTime = 0;
+    knockSound.play();
 
 // Ocultar popup cuando termine el audio
-knockSound.onended = () => {
-  popupDemon.classList.add('oculto');
-};
+    knockSound.onended = () => {
+        popupDemon.classList.add('oculto');
+    };
 });
 
