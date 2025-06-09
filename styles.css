@@ -328,7 +328,7 @@ main {
 }
 
 .ventana2 {
-    position: absolute;
+    position: fixed;
     left: calc(100% - 320px); /* 300px de ancho + margen de seguridad */
     top: calc(100% - 500px);  /* ajusta según altura de tu ventana */
     width: 260px;
