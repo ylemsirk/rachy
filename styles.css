@@ -16,6 +16,7 @@
 
 body {
     background: url("back.png");
+    background-attachment: fixed;
 }
 
 main {
@@ -252,6 +253,39 @@ main {
     z-index: 999;
 }
 
+.ventana2 h1{
+    color: whitesmoke;
+    font-family: Pixelify Sans, sans-serif;
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+.ventana2 p{
+    color: whitesmoke;
+    font-family: Pixelify Sans, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.ventana2 #disk{
+    margin-left: 162px;
+    align-content: right;
+    justify-content: right;
+    align-items: right;
+    justify-items: right;
+    text-align: right;
+}
+.ventana2 #rat{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    align-content: right;
+    justify-content: right;
+    align-items: right;
+    justify-items: right;
+    text-align: right;
+}
+
+
 /* Barra de título tipo Windows 98 */
 .barra-superior {
     background: url("glitter.gif");
@@ -288,6 +322,62 @@ main {
 }
 
 .botones-ventana button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.ventana2 {
+    position: fixed;
+    left: calc(100% - 320px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 400px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-image: url("photosback.gif");
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+    font-family: Pixelify Sans, sans-serif;
+    background-position: center;
+    background-size: 90px;
+}
+
+/* Barra de título tipo Windows 98 */
+.barra-superior2 {
+    background: rgb(0, 25, 189);
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+    font-family: Pixelify Sans, sans-serif;
+}
+
+.barra-superior2 .titulo-ventana2 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify sans, sans serif;
+}
+
+.botones-ventana2 {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana2 button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80);
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana2 button:active {
     box-shadow: inset 2px 2px rgb(80, 80, 80);
     padding-bottom: 0px;
     padding-right: 0px;

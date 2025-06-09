@@ -204,6 +204,7 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const boton = document.getElementById("boton-confeti");
   const gifContainer = document.getElementById("gif-confeti");
