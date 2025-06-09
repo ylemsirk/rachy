@@ -297,3 +297,4 @@ document.addEventListener("DOMContentLoaded", () => {
       contenido.style.display = "block";
       maximized = false;
     }
+  });
