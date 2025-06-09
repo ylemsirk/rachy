@@ -267,34 +267,3 @@ document.addEventListener("DOMContentLoaded", () => {
   minimizarBtn.addEventListener("click", () => {
     contenido.style.display = "none";
   });
-
-  // ---- MAXIMIZAR / RESTAURAR ----
-  let maximized = false;
-  let prevStyles = {};
-
-  maximizarBtn.addEventListener("click", () => {
-    if (!maximized) {
-      // Guardar estilos anteriores
-      prevStyles = {
-        width: ventana.style.width,
-        height: ventana.style.height,
-        top: ventana.style.top,
-        left: ventana.style.left
-      };
-
-      ventana.style.top = "0";
-      ventana.style.left = "0";
-      ventana.style.width = "100vw";
-      ventana.style.height = "100vh";
-      contenido.style.display = "block";
-      maximized = true;
-    } else {
-      // Restaurar estilos anteriores
-      ventana.style.width = prevStyles.width;
-      ventana.style.height = prevStyles.height;
-      ventana.style.top = prevStyles.top;
-      ventana.style.left = prevStyles.left;
-      contenido.style.display = "block";
-      maximized = false;
-    }
-  });
