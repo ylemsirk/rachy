@@ -263,40 +263,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const ventana = document.querySelector(".ventana2");
-  const barra = ventana.querySelector(".barra-superior2");
-  const minimizarBtn = ventana.querySelector(".minimizar2");
-  const maximizarBtn = ventana.querySelector(".maximizar2");
-  const contenido = ventana.querySelector(".ventana2-content");
-
-  let isDragging = false;
-  let offsetX, offsetY;
-
-  // ---- DRAG ----
-  barra.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    const rect = ventana.getBoundingClientRect();
-    offsetX = e.clientX - rect.left;
-    offsetY = e.clientY - rect.top;
-    ventana.style.position = "absolute";
-    ventana.style.zIndex = 1000;
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (isDragging) {
-      ventana.style.left = `${e.clientX - offsetX}px`;
-      ventana.style.top = `${e.clientY - offsetY}px`;
-    }
-  });
-
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-  });
-
-  // ---- MINIMIZAR ----
+ // ---- MINIMIZAR ----
   minimizarBtn.addEventListener("click", () => {
     contenido.style.display = "none";
   });
 
   // ---- MAXIMIZAR / RESTAURAR ----
+  let maximized = false;
+  let prevStyles = {};
+
+  maximizarBtn.addEventListener("click", () => {
+    if (!maximized) {
+      // Guardar estilos anteriores
+      prevStyles = {
+        width: ventana.style.width,
+        height: ventana.style.height,
+        top: ventana.style.top,
+        left: ventana.style.left
+      };
+
+      ventana.style.top = "0";
+      ventana.style.left = "0";
+      ventana.style.width = "100vw";
+      ventana.style.height = "100vh";
+      contenido.style.display = "block";
+      maximized = true;
+    } else {
+      // Restaurar estilos anteriores
+      ventana.style.width = prevStyles.width;
+      ventana.style.height = prevStyles.height;
+      ventana.style.top = prevStyles.top;
+      ventana.style.left = prevStyles.left;
+      contenido.style.display = "block";
+      maximized = false;
+    }
+  });
+});
