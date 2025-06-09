@@ -674,3 +674,78 @@ main {
 .oculto {
     display: none;
 }
+
+#first-photo4 {
+    position: relative;
+    margin: 40px auto;
+    background-image: url("photosback.gif");
+    background-size: 80px;
+    background-position: center;
+    color: white;
+    border: 2px solid white;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 4px 4px 0 #808080;
+    text-align: center;           /* Cambia a 'left' */
+      /* Añade un poco de margen interno */
+}
+
+#first-photo4 .barra-p1 {
+    background: url("idk-back.gif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#first-photo4 .p1-v {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: left;           /* Cambia a 'left' */
+    flex-grow: 1;
+    padding-left: 8px;          /* Añade un poco de margen interno */
+}
+
+
+#first-photo4 .p1-b {
+    display: flex;
+    gap: 2px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+#first-photo4 .p1-b button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126);
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+#first-photo4 .p1-b button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+#f2-content .p1-b button:active {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#f2-content img {
+    max-width: 102%;
+    height: auto;
+    border: 1px solid white;
+}
