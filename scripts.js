@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Manejar el click
   botonAceptar.addEventListener('click', () => {
     // Mostrar popup
-    first4.classList.remove('oculto');
+    first4.classList.remove('oculto2');
 
     // Desactivar botones internos
     botonesInternos.forEach(btn => btn.disabled = true);
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Manejar el fin del sonido (solo una vez, desde el inicio)
   yaySound.addEventListener('ended', () => {
     // Ocultar popup
-    first4.classList.add('oculto');
+    first4.classList.add('oculto2');
 
     // Reactivar botones internos
     botonesInternos.forEach(btn => btn.disabled = false);

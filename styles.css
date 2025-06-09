@@ -672,18 +672,22 @@ main {
 }
 
 .first-photo4 {
-    position: relative;
-    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-130%, -50%);
+    margin: 5px;
     background-image: url("photosback.gif");
-    background-size: 80px;
-    background-position: center;
+    background-size: 90px;
     color: white;
     border: 2px solid white;
-    width: 400px;
+    height: auto;
+    width: 320px;
     max-width: 100%;
+    min-height: 300px;
     box-shadow: 4px 4px 0 #808080;
-    text-align: center;           /* Cambia a 'left' */
-      /* Añade un poco de margen interno */
+    text-align: center;
 }
 
 .first-photo4 .barra-p1 {
@@ -695,7 +699,8 @@ main {
     padding: 4px 6px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
+    flex-direction: row;
 }
 
 .first-photo4 .p1-v {
@@ -704,7 +709,12 @@ main {
     font-family: "Pixelify Sans", sans-serif;
     text-align: left;           /* Cambia a 'left' */
     flex-grow: 1;
-    padding-left: 8px;          /* Añade un poco de margen interno */
+    display: flex;
+    flex-direction: row;
+    margin-left: -30px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+       /* Añade un poco de margen interno */
 }
 
 
@@ -712,6 +722,7 @@ main {
     display: flex;
     gap: 2px;
     font-family: "Pixelify Sans", sans-serif;
+    padding-right: 10px;
 }
 
 .first-photo4 .p1-b button {
@@ -741,11 +752,26 @@ main {
 }
 
 .f2-content img {
-    max-width: 102%;
+    max-width: 100%;
     height: auto;
-    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
 }
+
+#f2-content {
+  padding-top: 12px; /* crea el espacio que deseas */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  border: 1px solid white;
+}
+
 
 .oculto {
     display: none;
 }
+
+.oculto2 {
+    display: none;
+}
+
