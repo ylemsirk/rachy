@@ -506,6 +506,41 @@ main {
 #confeti-container p{
     color: rgba(128, 128, 128, 0.468);
 }
+#first-photo2 {
+    position: relative;
+    margin: 40px auto;
+    background-image: url("photosback.gif");
+    background-size: 80px;
+    background-position: center;
+    color: white;
+    border: 2px solid white;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 4px 4px 0 #808080;
+    text-align: center;           /* Cambia a 'left' */
+      /* Añade un poco de margen interno */
+}
+
+#first-photo2  .barra-p1 {
+    background: url("idk-back.gif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#first-photo2  .p1-v {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: left;           /* Cambia a 'left' */
+    flex-grow: 1;
+    padding-left: 8px;          /* Añade un poco de margen interno */
+}
 
 #aceptar {
     margin-bottom: 20px;
