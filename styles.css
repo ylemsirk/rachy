@@ -660,19 +660,9 @@ main {
 .popup-demon .p2-v {
   font-weight: bold;
   font-size: 14px;
-
   font-family: Pixelify Sans, sans-serif;
 }
 
-.popup-demon .p2-b button {
-  background-color: gray;
-  border: none;
-  margin-left: 3px;
-  width: 20px;
-  height: 20px;
-  cursor: default;
-  font-weight: bold;
-}
 .popup-demon .p2-b button {
     background-color: rgb(188, 0, 0);
     box-shadow: inset -3px -3px rgb(92, 0, 0), inset 3px 3px rgb(255, 0, 0);
