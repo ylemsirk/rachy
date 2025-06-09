@@ -342,9 +342,6 @@ main {
 }
 .ventana2-content {
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Barra de título tipo Windows 98 */
