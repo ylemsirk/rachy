@@ -650,10 +650,6 @@ main {
 }
 
 .popup-demon .barra-p1 {
-  background-image: url("satan.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   color: white;
   padding: 5px;
   display: flex;
@@ -688,7 +684,6 @@ main {
 .popup-demon #f1-content img {
   width: 700px;
   height: auto;
-  z-index: 9999;
 }
 
 .oculto {
