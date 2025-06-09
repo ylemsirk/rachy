@@ -268,5 +268,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.querySelector('.maximizar2').addEventListener('click', () => {
-    document.querySelector('.ventana2-content').style.display = 'flex';
+    document.querySelector('.ventana2-content').style.display = 'block';
 });
