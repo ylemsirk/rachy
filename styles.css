@@ -509,7 +509,8 @@ main {
     align-items: center;
     align-content: center;
     border-radius: 40%;
-
+    z-index: 99;
+    position: relative;
 }
 #boton-confeti img{
     width: 40px;
@@ -519,7 +520,8 @@ main {
 }
 
 #confeti-container p{
-    color: rgba(128, 128, 128, 0.468);
+    color: rgba(128, 128, 128, 0.832);
+    z-index: 99;
 }
 #first-photo2 {
     position: relative;
@@ -817,7 +819,7 @@ main {
   inset: 0; /* Equivale a top: 0; right: 0; bottom: 0; left: 0 */
   background-color: rgba(255, 255, 255, 0.6); /* Blanco con opacidad */
   z-index: 1; /* Asegura que esté por detrás del contenido */
-  border-radius: 50px;
+  border-radius: 90px;
 }
 
 .firstwrap2 {
@@ -826,7 +828,7 @@ main {
     width: 300px;
     justify-self: center;
     padding: 0px;
-    border-radius: 50px;
+    border-radius: 90px;
     box-shadow: 2px 2px rgb(105, 105, 105), inset 2px 2px white;
     
 }
@@ -839,6 +841,7 @@ main {
 
 .firstwrap2 h1{
     padding: 20px;
+    padding-top: 5px;
     z-index: 6;
     position: relative;
 }
