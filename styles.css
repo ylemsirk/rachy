@@ -269,7 +269,7 @@ main {
 
 .ventana {
     position: fixed;
-    left: calc(100% - 320px); /* 300px de ancho + margen de seguridad */
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
     top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
     width: 260px;
     background-color: #c0c0c0;
@@ -349,7 +349,7 @@ main {
 
 .ventana2 {
     position: fixed;
-    left: calc(100% - 320px); /* 300px de ancho + margen de seguridad */
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
     top: calc(100% - 500px);  /* ajusta según altura de tu ventana */
     width: 260px;
     background-image: url("photosback.gif");
