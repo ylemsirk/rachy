@@ -411,7 +411,7 @@ main {
     position: relative;
     margin: 40px auto;
     background-image: url("photosback.gif");
-	animation: moverfondoA 40s linear infinite;
+	animation: moverfondoA 30s linear infinite;
     background-size: 80px;
     background-position: center;
     color: white;
