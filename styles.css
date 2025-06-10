@@ -189,7 +189,7 @@ main {
 
 .reproductor-musica > * {
     position: relative;
-    z-index: 2;
+    z-index: 99999;
 }
 
 .reproductor-musica h1 {
