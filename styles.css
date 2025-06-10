@@ -68,7 +68,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.833); /* capa negra semitransparente */
+    background-color: rgba(255, 255, 255, 0.819); /* capa negra semitransparente */
     z-index: -2;
 }
 
@@ -136,7 +136,10 @@ main {
 /* Contenido interno de la tarjeta */
 .contenido-card {
     position: relative;
-    padding: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
     text-align: center;
     z-index: -2; /* asegura que el texto quede por encima */
 }
@@ -778,7 +781,6 @@ main {
   border: 1px solid white;
 }
 
-
 .oculto {
     display: none;
 }
@@ -787,3 +789,16 @@ main {
     display: none;
 }
 
+.firstwrap {
+    background-color: rgb(243, 243, 243);
+    width: 600px;
+    justify-self: center;
+    padding: 0px;
+    border-radius: 70px;
+    box-shadow: 2px 2px rgb(105, 105, 105), inset 2px 2px white;
+    
+}
+
+.firstwrap p{
+    padding: 20px;
+}
