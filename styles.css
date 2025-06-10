@@ -845,3 +845,74 @@ main {
     z-index: 6;
     position: relative;
 }
+
+.ventana-mensaje {
+  position: fixed;
+  left: calc(100% - 320px); /* Ajusta según necesidad */
+  top: calc(100% - 500px);
+  width: 260px;
+  background-image: url("photosback.gif");
+  background-size: 90px;
+  background-position: center;
+  border: 2px solid #ffffff;
+  box-shadow: 3px 3px 0 #808080;
+  z-index: 999;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.barra-mensaje {
+  background-color: rgb(0, 25, 189);
+  color: white;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+}
+
+.titulo-mensaje {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.botones-mensaje {
+  display: flex;
+  gap: 2px;
+}
+
+.botones-mensaje button {
+  background-color: silver;
+  box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+  border: 1px solid #000;
+  width: 20px;
+  height: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding-bottom: 2px;
+  padding-right: 2px;
+}
+
+.botones-mensaje button:active {
+  box-shadow: inset 2px 2px rgb(80, 80, 80);
+  padding-bottom: 0;
+  padding-right: 0;
+}
+
+.contenido-mensaje {
+  display: block;
+  padding: 10px;
+}
+
+.contenido-mensaje h1 {
+  color: whitesmoke;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.contenido-mensaje p {
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 10px;
+}
