@@ -56,6 +56,7 @@ main {
     box-shadow: 4px 4px 0 #808080;
     z-index: 10;
     overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
 }
 
 #card h1 {
@@ -936,13 +937,13 @@ main {
 .top {
     position: relative; /* clave para que el ::before no se salga */
     color: rgb(0, 137, 168);
-    width: 800px;
-    transform: translate(-50%, -50%);
+    width: 1150px;
+    transform: translate(6%, 160%);
     background-image: url("realbackcard.png");
     animation: moverfondoA 100s linear 0s infinite normal none running;
     background-size: cover;
     border: 2px solid #ffffff;
-    box-shadow: 4px 4px 0 #808080;
-    z-index: 10;
+    box-shadow: 4px 4px 0 #0046a0;
+    z-index: 90;
     overflow: hidden; /* evita que el borde decorativo sobresalga */
 }
