@@ -31,14 +31,6 @@
   }
 }
 
-.tu-clase {
-  background-image: url("tu-imagen.gif");
-  background-repeat: repeat;
-  background-size: cover;
-  animation: moverfondo 40s linear infinite;
-}
-
-
 body {
     background: url("back.png");
     background-attachment: fixed;
