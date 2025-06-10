@@ -794,7 +794,7 @@ main {
     width: 600px;
     justify-self: center;
     padding: 0px;
-    border-radius: 70px;
+    border-radius: 50px;
     box-shadow: 2px 2px rgb(105, 105, 105), inset 2px 2px white;
     
 }
