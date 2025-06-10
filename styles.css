@@ -932,3 +932,17 @@ main {
 #firm {
 	color: rgb(0, 208, 255);
 }
+
+.top {
+    position: relative; /* clave para que el ::before no se salga */
+    color: rgb(0, 137, 168);
+    width: 800px;
+    transform: translate(-50%, -50%);
+    background-image: url("realbackcard.png");
+    animation: moverfondoA 100s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+}
