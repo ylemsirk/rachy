@@ -520,6 +520,7 @@ main {
     position: relative;
     margin: 40px auto;
     background-image: url("photosback.gif");
+	animation: moverfondoA 30s linear infinite;
     background-size: 80px;
     background-position: center;
     color: white;
@@ -689,6 +690,7 @@ main {
     transform: translate(-130%, -50%);
     margin: 5px;
     background-image: url("photosback.gif");
+	animation: moverfondoA 30s linear infinite;
     background-size: 90px;
     color: white;
     border: 2px solid white;
