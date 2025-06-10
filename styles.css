@@ -847,7 +847,7 @@ main {
 
 .ventana-mensaje {
   position: fixed;
-  left: calc(100% - 300px); /* Ajusta según necesidad */
+  left: calc(100% - 310px); /* Ajusta según necesidad */
   top: calc(100% - 680px);
   width: 260px;
   background-image: url("backtom.gif");
