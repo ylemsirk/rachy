@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="icon" href="icono.png"/>
+        <script src="scripts.js" defer></script>
     </head>
     <body>
         <div class = "top">
@@ -22,9 +23,27 @@
         <div class = "grid">
             <div id="fondogrid"></div>
             <div id="borde2"></div>
+            <div class="contenido-grid">
+                <h1 class = "gridsecciones" id="gridprincipal">Principal</h1>
+                  <button class="botongrid1">Carta</button>
+                  <div id="fondogridprincipal"></div>
+                <h1 class="gridsecciones" id="gridgaleria">Galería</h1>
+                  <button class="botongrid2">Recuerdos</button></p>
+                  <button class="botongrid3">Roblox</button></p>
+                  <button class="botongrid4">Extra</button></p>
+                  <div id="fondogridgaleria"></div>
+                <h1 class="gridsecciones" id="gridbiblioteca">Biblioteca</h1>
+                     <button class="botongrid5">Historia 1</button></p>
+                     <button class="botongrid6">Historia 2</button></p>
+                     <button class="botongrid7">Historia 3</button></p>
+                     <button class="botongrid8">Historia 4</button></p>
+                     <button class="botongrid9">Historia 5</button></p>
+                     <button class="botongrid10">Extra</button></p>
+                     <div id="fondogridbiblioteca"></div>
+            </div>
         </div>
         <div id="pagina-principal">
-            <div class="ventana-mensaje">
+            <div class="ventana-mensaje detalles-c1">
                 <div class="barra-mensaje">
                     <span class="titulo-mensaje">Spam</span>
                     <div class="botones-mensaje">
@@ -37,21 +56,20 @@
                 <img src="tom.gif" width="80px"><p>¡Aprovecha los nuevos descuentos de la tienda de Tom Nook!</p>
             </section>
             </div>
-
-            <div class="ventana2">
-            <div class="barra-superior2">
-                <span class="titulo-ventana2">¡Anuncio!</span>
-                <div class="botones-ventana2">
-                <button class="minimizar2">─</button>
-                <button class="maximizar2">☐</button>
-                <button class="cerrar2">✕</button>
+            <div class="ventana2 detalles-c1">
+                <div class="barra-superior2 detalles-c1">
+                    <span class="titulo-ventana2 detalles-c1">¡Anuncio!</span>
+                    <div class="botones-ventana2 detalles-c1">
+                    <button class="minimizar2">─</button>
+                    <button class="maximizar2">☐</button>
+                    <button class="cerrar2">✕</button>
+                    </div>
                 </div>
-            </div>
-            <section class="ventana2-content">
-                <h1>Canción dedicada del día de hoy:</h1>
-                <p>Luis Miguel - Sunny</p>
-                <img src="rat.gif" id="rat" width="50px"><img src="disk.gif" id="disk" width="45px">
-            </section>
+                <div class="ventana2-content detalles-c1">
+                    <h1>Canción dedicada del día de hoy:</h1>
+                    <p>Luis Miguel - Sunny</p>
+                    <img src="rat.gif" id="rat" width="50px"><img src="disk.gif" id="disk" width="45px">
+                </div>
             </div> <!-- Este cierre estaba antes de tiempo -->
             <div class="ventana">
                 <div class="barra-superior">
@@ -81,150 +99,287 @@
                     </button>
                 </div>
             </section>
-            </div>
-            <div class="contenido-principal" class="ventana" id="card">
-                <div class="barra-superior">
-                    <span class="titulo-ventana">Carta</span>
-                    <div class="botones-ventana">
-                        <button>−</button>
-                        <button>□</button>
-                        <button>×</button>
-                    </div>
-                </div>
-                <div class="contenido-card">
-                    <main>
-                        <audio id="sonido-confeti" src="confeti.mp3" preload="auto"></audio>
-                        <br>
-                        <section class="firstwrap2">
-                            <div id="confeti-container" style="text-align: center; margin-top: 20px;">
-                                <p> click ---><button id="boton-confeti"><img src="hello.png"></button><---click</p>
-                                <div id="gif-confeti" style="margin-top: 10px;"></div>
+        </div>
+        </div>
+            <div class="contenido1">
+                <div class="contenido-principal ventana" id="card">
+                    <div class="barra-superior">
+                        <span class="titulo-ventana">Carta</span>
+                        <div class="botones-ventana">
+                            <button>−</button>
+                            <button>□</button>
+                            <button>×</button>
                         </div>
-                            <h1>FELIZ CUMPLEAÑOS</h1>
-                            
-                        <audio id="sonido-confeti" src="confeti.mp3" preload="auto"></audio>
-                        </section>
-                        <br>
-                        <section class="firstwrap">
-                            <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte, me hubiese gustado muchísimo. <b>Te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo demasiado, TE AMO MUCHO MUCHO MUCHO MUCHO MUCHO MUCHO MUCHO</b>, no hay palabras que puedan expresar cuánto te amo, en serio; te adoro, te quiero, te deseo, te anhelo, te estimo, te ansío, te venero; no podría estar más enamorado de ti <img src="love.gif" width="20px">, me da igual que no pueda tocarte (es mentira, es lo que más me duele), aún así siento que mi amor por ti es totalmente real. Eres una persona maravillosa (aunque maltrates a los niños <img src="mymelo.gif" width="40px">), siempre logras sacarme una sonrisa con tus chistes todos malos (los amo), siento que estoy totalmente seguro cuando te tengo y quiero que lo nuestro dure bastante (que sea para siempre, por favor).</p>
-                        </section>
-                        <figure class="first-photo" class="ventana" id="first-photo">
-                            <div class="barra-p1">
-                                <span class="p1-v">La persona más bella del mundo</span>
-                                <div class="p1-b">
-                                    <button>-</button>
-                                    <button>□</button>
-                                    <button>×</button>
-                                </div>
+                    </div>
+                    <div class="contenido-card">
+                        <main>
+                            <audio id="sonido-confeti" src="confeti.mp3" preload="auto"></audio>
+                            <br>
+                            <section class="firstwrap2">
+                                <div id="confeti-container" style="text-align: center; margin-top: 20px;">
+                                    <p> click ---><button id="boton-confeti"><img src="hello.png"></button><---click</p>
+                                    <div id="gif-confeti" style="margin-top: 10px;"></div>
                             </div>
-                            <div id="f1-content">
-                                <img src="rachy1.jpg" height="300px">
-                            </div>
-                        </figure>
-                        <section class="firstwrap">
-                            <p>Una de las mejores decisiones de mi vida fue entrar a ese chat a escribirte “holaaaaaa”, al principio me dije a mí mismo: “de seguro me ghostea a los 3 días”; por suerte no fue así y seguimos hablando todos los días (A PESAR DE QUE DESPUÉS DE VARIAS SEMANAS ME GHOSTEASTE POR 2 DÍAS <img src="angry.gif" width="30px">). Recuerdo la vez que me puso celoso el venezolano, después de eso nos volvimos aún más unidos y me gustó el vínculo que empezamos a formar. Yo sé que en el fondo amas a los indigentes, judíos y negros, es solo que se te dificulta aceptarlo. Me hubiese gustado agregar más cosas, pero me suspendieron la cuenta de Instagram y se borraron mis mensajes del chat. <img src="cry.gif" width="30px"><img src="cry.gif" width="30px"><img src="cry.gif" width="30px"></p>
-                        </section>
-                        <figure class="first-photo2" class="ventana" id="first-photo2">
-                            <div class="barra-p1">
-                                <span class="p1-v">Señores calientes a 3km de tu casa</span>
-                                <div class="p1-b">
-                                    <button>-</button>
-                                    <button>□</button>
-                                    <button>×</button>
-                                </div>
-                            </div>
-                            <div id="f1-content">
-                                <img src="rachy2.jpg" height="300px">
-                            </div>
-                            <div class="botones">
-                                <button id="aceptar"><span class="contenido-boton">Aceptar</span></button>
-                                <button id="rechazar"><span class="contenido-boton">Rechazar</span></button>
-                            </div>
-                        <!-- Popup oculto -->
-                            <div id="popup-demon" class="popup-demon oculto">
-                            <div class="first-photo3 demon-window">
-                                <div class="barra-p2">
-                                    <span class="p2-v">You can't hide</span>
+                                <h1>FELIZ CUMPLEAÑOS</h1>
+                                
+                            <audio id="sonido-confeti" src="confeti.mp3" preload="auto"></audio>
+                            </section>
+                            <br>
+                            <section class="firstwrap">
+                                <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte, me hubiese gustado muchísimo. <b>Te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo, te amo demasiado, TE AMO MUCHO MUCHO MUCHO MUCHO MUCHO MUCHO MUCHO</b>, no hay palabras que puedan expresar cuánto te amo, en serio; te adoro, te quiero, te deseo, te anhelo, te estimo, te ansío, te venero; no podría estar más enamorado de ti <img src="love.gif" width="20px">, me da igual que no pueda tocarte (es mentira, es lo que más me duele), aún así siento que mi amor por ti es totalmente real. Eres una persona maravillosa (aunque maltrates a los niños <img src="mymelo.gif" width="40px">), siempre logras sacarme una sonrisa con tus chistes todos malos (los amo), siento que estoy totalmente seguro cuando te tengo y quiero que lo nuestro dure bastante (que sea para siempre, por favor).</p>
+                            </section>
+                            <figure class="first-photo ventana" id="first-photo">
+                                <div class="barra-p1">
+                                    <span class="p1-v">La persona más bella del mundo</span>
+                                    <div class="p1-b">
+                                        <button>-</button>
+                                        <button>□</button>
+                                        <button>×</button>
+                                    </div>
                                 </div>
                                 <div id="f1-content">
-                                    <img src="demon.gif" alt="Demon GIF" />
+                                    <img src="rachy1.jpg" height="300px">
                                 </div>
-                            </div>
-                            </div>
-                            <figure class="first-photo4 ventana oculto2" id="first-photo4">
-                            <!-- BARRA SUPERIOR -->
-                            <div class="barra-p1">
-                                <span class="p1-v">GANASTE SIDA!!! FELICIDADES!!!</span>
-                                <div class="p1-b">
-                                <button>-</button>
-                                <button>□</button>
-                                <button>×</button>
-                                </div>
-                            </div>
-
-                            <!-- CONTENIDO PRINCIPAL DE LA VENTANA -->
-                            <div id="f2-content">
-                                <img src="dexter.png" height="300px" />
-                            </div>
                             </figure>
+                            <section class="firstwrap">
+                                <p>Una de las mejores decisiones de mi vida fue entrar a ese chat a escribirte “holaaaaaa”, al principio me dije a mí mismo: “de seguro me ghostea a los 3 días”; por suerte no fue así y seguimos hablando todos los días (A PESAR DE QUE DESPUÉS DE VARIAS SEMANAS ME GHOSTEASTE POR 2 DÍAS <img src="angry.gif" width="30px">). Recuerdo la vez que me puso celoso el venezolano, después de eso nos volvimos aún más unidos y me gustó el vínculo que empezamos a formar. Yo sé que en el fondo amas a los indigentes, judíos y negros, es solo que se te dificulta aceptarlo. Me hubiese gustado agregar más cosas, pero me suspendieron la cuenta de Instagram y se borraron mis mensajes del chat. <img src="cry.gif" width="30px"><img src="cry.gif" width="30px"><img src="cry.gif" width="30px"></p>
+                            </section>
+                            <figure class="first-photo2 ventana" id="first-photo2">
+                                <div class="barra-p1">
+                                    <span class="p1-v">Señores calientes a 3km de tu casa</span>
+                                    <div class="p1-b">
+                                        <button>-</button>
+                                        <button>□</button>
+                                        <button>×</button>
+                                    </div>
+                                </div>
+                                <div id="f6-content">
+                                    <img src="rachy2.jpg" height="300px">
+                                </div>
+                                <div class="botones">
+                                    <button id="aceptar"><span class="contenido-boton">Aceptar</span></button>
+                                    <button id="rechazar"><span class="contenido-boton">Rechazar</span></button>
+                                </div>
+                            <!-- Popup oculto -->
+                                <div id="popup-demon" class="popup-demon oculto">
+                                <div class="first-photo3 demon-window">
+                                    <div class="barra-p2">
+                                        <span class="p2-v">You can't hide</span>
+                                    </div>
+                                    <div id="f3-content">
+                                        <img src="demon.gif" alt="Demon GIF" />
+                                    </div>
+                                </div>
+                                </div>
+                                <figure class="first-photo4 ventana oculto2" id="first-photo4">
+                                <!-- BARRA SUPERIOR -->
+                                <div class="barra-p1">
+                                    <span class="p1-v">GANASTE SIDA!!! FELICIDADES!!!</span>
+                                    <div class="p1-b">
+                                    <button>-</button>
+                                    <button>□</button>
+                                    <button>×</button>
+                                    </div>
+                                </div>
 
-                            <!-- Audio -->
-                            <audio id="knock-sound" src="knock.MP3" preload="auto"></audio>
-                            <audio id="yay-sound" src="yay.mp3" preload="auto"></audio>
-                        </figure>
-                        <section class="firstwrap">
-                            <p>Ya quiero que llegue el día en el que nos podamos ver, quiero ser de ayuda para ti y no permitiré que sufras más; ya quiero ver a Holly para llenarla de besitos (si no es que me llena de mordidas primero) y a chicle para jugar con él (si no es que me muerde también).</p>
-                        </section>
-                        <figure class="first-photo" class="ventana" id="first-photo">
-                            <div class="barra-p1">
-                                <span class="p1-v">Mis 2 princesas juntas</span>
-                                <div class="p1-b">
-                                    <button>-</button>
-                                    <button>□</button>
-                                    <button>×</button>
+                                <!-- CONTENIDO PRINCIPAL DE LA VENTANA -->
+                                <div id="fd-content">
+                                    <img src="dexter.png" height="300px" />
                                 </div>
-                            </div>
-                            <div id="f1-content">
-                                <img src="rachy4.jpg" height="300px">
-                            </div>
-                        </figure>
-                        <section class="firstwrap">
-                            <p>Gracias por el impacto positivo que has provocado en mí y en mi vida; me gustaría compartir esta felicidad contigo para que sepas lo mucho que significas para mí.</p>
-                        </section>
-                        <figure class="first-photo" class="ventana" id="first-photo">
-                            <div class="barra-p1">
-                                <span class="p1-v">NO PUEDO CON TANTA BELLEZAA</span>
-                                <div class="p1-b">
-                                    <button>-</button>
-                                    <button>□</button>
-                                    <button>×</button>
+                                </figure>
+
+                                <!-- Audio -->
+                                <audio id="knock-sound" src="knock.MP3" preload="auto"></audio>
+                                <audio id="yay-sound" src="yay.mp3" preload="auto"></audio>
+                            </figure>
+                            <section class="firstwrap">
+                                <p>Ya quiero que llegue el día en el que nos podamos ver, quiero ser de ayuda para ti y no permitiré que sufras más; ya quiero ver a Holly para llenarla de besitos (si no es que me llena de mordidas primero) y a chicle para jugar con él (si no es que me muerde también).</p>
+                            </section>
+                            <figure class="first-photo ventana" id="first2-photo">
+                                <div class="barra-p1">
+                                    <span class="p1-v">Mis 2 princesas juntas</span>
+                                    <div class="p1-b">
+                                        <button>-</button>
+                                        <button>□</button>
+                                        <button>×</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="f1-content">
-                                <img src="rachy5.jpg" height="300px">
-                            </div>
-                        </figure>
-                        <section class="firstwrap">
-                            <p>Esta página tiene varias cosas (historias, música, recuerdos y demás), y perdón si está horrible, es la segunda que hago <img src="cry.gif" width="30px">. Ojalá y te guste mucho, la hice con mucho amor.</p>
-                        </section>
-                        <figure class="first-photo" class="ventana" id="first-photo">
-                            <div class="barra-p1">
-                                <span class="p1-v">Primer ángel captado en cámara</span>
-                                <div class="p1-b">
-                                    <button>-</button>
-                                    <button>□</button>
-                                    <button>×</button>
+                                <div id="f4-content">
+                                    <img src="rachy4.jpg" height="300px">
                                 </div>
-                            </div>
-                            <div id="f1-content">
-                                <img src="rachy3.jpg" height="300px">
-                            </div>
-                        </figure>
-                        <p id="firm">- Ylemsirk, el mejor novio has tenido y que tendrás.</p>
-                    </main>
+                            </figure>
+                            <section class="firstwrap">
+                                <p>Gracias por el impacto positivo que has provocado en mí y en mi vida; me gustaría compartir esta felicidad contigo para que sepas lo mucho que significas para mí.</p>
+                            </section>
+                            <figure class="first-photo ventana" id="first3-photo">
+                                <div class="barra-p1">
+                                    <span class="p1-v">NO PUEDO CON TANTA BELLEZAA</span>
+                                    <div class="p1-b">
+                                        <button>-</button>
+                                        <button>□</button>
+                                        <button>×</button>
+                                    </div>
+                                </div>
+                                <div id="f5-content">
+                                    <img src="rachy5.jpg" height="300px">
+                                </div>
+                            </figure>
+                            <section class="firstwrap">
+                                <p>Esta página tiene varias cosas (historias, música, recuerdos y demás), y perdón si está horrible, es la segunda que hago <img src="cry.gif" width="30px">. Ojalá y te guste mucho, la hice con mucho amor.</p>
+                            </section>
+                            <figure class="first-photo ventana" id="first4-photo">
+                                <div class="barra-p1">
+                                    <span class="p1-v">Primer ángel captado en cámara</span>
+                                    <div class="p1-b">
+                                        <button>-</button>
+                                        <button>□</button>
+                                        <button>×</button>
+                                    </div>
+                                </div>
+                                <div id="f7-content">
+                                    <img src="rachy3.jpg" height="300px">
+                                </div>
+                            </figure>
+                            <p id="firm">- Ylemsirk, el mejor novio has tenido y que tendrás.</p>
+                        </main>
+                    </div>
                 </div>
             </div>
-            <script src="scripts.js"></script>
+        <div class="contenido2">
+            <div class="contenido2-ventana" id="recuerdos">
+                <div class="barra-superior2">
+                    <span class="titulo-ventana2">Recuerdos</span>
+                    <div class="botones-ventana-rec">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-recuerdos">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>  
+        <div class="contenido3">
+            <div class="contenido3-ventana" id="roblox">
+                <div class="barra-superior3">
+                    <span class="titulo-ventana3">Recuerdos</span>
+                    <div class="botones-ventana-rob">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-roblox">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>  
+        <div class="contenido4">
+            <div class="contenido4-ventana" id="extragaleria">
+                <div class="barra-superior4">
+                    <span class="titulo-ventana4">Extra</span>
+                    <div class="botones-ventana-exg">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-extragaleria">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>  
+        <div class="contenido5">
+            <div class="contenido5-ventana" id="historia1">
+                <div class="barra-superior5">
+                    <span class="titulo-ventana5">Historia 1</span>
+                    <div class="botones-ventana-hi1">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-historia1">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
         </div>
+        <div class="contenido6">
+            <div class="contenido6-ventana" id="historia2">
+                <div class="barra-superior6">
+                    <span class="titulo-ventana6">Historia 2</span>
+                    <div class="botones-ventana-hi2">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-historia2">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenido7">
+            <div class="contenido7-ventana" id="historia3">
+                <div class="barra-superior7">
+                    <span class="titulo-ventana7">Historia 3</span>
+                    <div class="botones-ventana-hi3">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-historia3">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenido8">
+            <div class="contenido8-ventana" id="historia4">
+                <div class="barra-superior8">
+                    <span class="titulo-ventana8">Historia 4</span>
+                    <div class="botones-ventana-hi4">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-historia4">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>
+        <div class="contenido9">
+            <div class="contenido9-ventana" id="historia5">
+                <div class="barra-superior9">
+                    <span class="titulo-ventana9">Historia 5</span>
+                    <div class="botones-ventana-hi5">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-historia5">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>    
+        <div class="contenido10">
+            <div class="contenido10-ventana" id="extrabiblioteca">
+                <div class="barra-superior10">
+                    <span class="titulo-ventana10">Extra</span>
+                    <div class="botones-ventana-exb">
+                        <button class="minimizar2">─</button>
+                        <button class="maximizar2">☐</button>
+                        <button class="cerrar2">✕</button>
+                    </div>
+                </div>
+                <div class="contenido-extrabiblioteca">
+                    <p>Espero y la pases excelente el día de hoy. Estoy muy contento de estar presente en tu vida en este momento tan importante; perdón si no puedo estar al lado tuyo para acompañarte</p>
+                </div>
+            </div>
+        </div>  
+        <script src="scripts.js"></script>
     </body>
 </html>

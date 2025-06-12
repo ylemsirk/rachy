@@ -43,6 +43,7 @@
 
 body {
     background: url("bunny.gif");
+    transition: background-color 0.8s;
     background-color: rgb(0, 168, 240);
     background-attachment: fixed;
     background-repeat: repeat;
@@ -52,6 +53,71 @@ body {
 main {
     font-size: 18px;
     line-height: 30px;
+}
+
+.contenido1 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+
+.contenido2 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+
+.contenido3 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+
+.contenido4 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+.contenido5 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+.contenido6 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+.contenido7 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+.contenido8 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+.contenido9 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
+}
+
+.contenido10 {
+    position: absolute;
+    margin-left: -127px;
+    margin-top: 5px;
+    z-index: 99;
 }
 
 #card {
@@ -74,6 +140,36 @@ main {
 }
 
 #card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#recuerdos {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#recuerdos h1 {
+    color: rgb(0, 100, 162);
+}
+
+#recuerdos::before {
     content: '';
     position: absolute;
     top: 0;
@@ -145,6 +241,51 @@ main {
     padding-right: 0px;
 }
 
+#recuerdos .barra-superior2 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#recuerdos .titulo-ventana2 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#recuerdos .botones-ventana-rec {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#recuerdos .botones-ventana-rec button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+
+#recuerdos .botones-ventana-rec button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
 /* Contenido interno de la tarjeta */
 .contenido-card {
     position: relative;
@@ -158,6 +299,32 @@ main {
 }
 
 .contenido-card::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none; /* permite hacer clics normalmente */
+}
+
+contenido-recuerdos {
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2; /* asegura que el texto quede por encima */
+
+}
+
+.contenido-recuerdos::before {
     content: "";
     position: absolute;
     top: -20px;
@@ -290,6 +457,17 @@ main {
     z-index: 999;
 }
 
+.contenido2-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
 .ventana2 h1{
     color: whitesmoke;
     font-family: Pixelify Sans, sans-serif;
@@ -334,6 +512,23 @@ main {
     font-size: 0.9rem;
     font-family: Pixelify sans, sans serif;
 }
+
+.barra-superior2 {
+    background: url("glitter.gif");
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.barra-superior2 .titulo-ventana {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify sans, sans serif;
+}
+
 
 .botones-ventana {
     display: flex;
@@ -427,6 +622,7 @@ main {
 #first-photo {
     position: relative;
     margin: 40px auto;
+    margin-left: -233px;
     background-image: url("photosback.gif");
 	animation: moverfondoA 30s linear infinite;
     background-size: 80px;
@@ -487,6 +683,199 @@ main {
     padding-right: 0;
 }
 
+#first2-photo {
+    position: relative;
+    margin: 40px auto;
+    margin-left: -233px;
+    background-image: url("photosback.gif");
+	animation: moverfondoA 30s linear infinite;
+    background-size: 80px;
+    background-position: center;
+    color: white;
+    border: 2px solid white;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 4px 4px 0 #808080;
+    text-align: center;           /* Cambia a 'left' */
+      /* Añade un poco de margen interno */
+}
+
+#first2-photo .barra-p1 {
+    background: url("idk-back.gif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#first2-photo .p1-v {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: left;           /* Cambia a 'left' */
+    flex-grow: 1;
+    padding-left: 8px;          /* Añade un poco de margen interno */
+}
+
+
+#first2-photo .p1-b {
+    display: flex;
+    gap: 2px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+#first2-photo .p1-b button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+#first2-photo .p1-b button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+#first3-photo {
+    position: relative;
+    margin: 40px auto;
+    margin-left: -233px;
+    background-image: url("photosback.gif");
+	animation: moverfondoA 30s linear infinite;
+    background-size: 80px;
+    background-position: center;
+    color: white;
+    border: 2px solid white;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 4px 4px 0 #808080;
+    text-align: center;           /* Cambia a 'left' */
+      /* Añade un poco de margen interno */
+}
+
+#first3-photo .barra-p1 {
+    background: url("idk-back.gif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#first3-photo .p1-v {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: left;           /* Cambia a 'left' */
+    flex-grow: 1;
+    padding-left: 8px;          /* Añade un poco de margen interno */
+}
+
+
+#first3-photo .p1-b {
+    display: flex;
+    gap: 2px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+#first3-photo .p1-b button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+#first3-photo .p1-b button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+#first4-photo {
+    position: relative;
+    margin: 40px auto;
+    margin-left: -233px;
+    background-image: url("photosback.gif");
+	animation: moverfondoA 30s linear infinite;
+    background-size: 80px;
+    background-position: center;
+    color: white;
+    border: 2px solid white;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 4px 4px 0 #808080;
+    text-align: center;           /* Cambia a 'left' */
+      /* Añade un poco de margen interno */
+}
+
+#first4-photo .barra-p1 {
+    background: url("idk-back.gif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom: 2px solid white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#first4-photo .p1-v {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: left;           /* Cambia a 'left' */
+    flex-grow: 1;
+    padding-left: 8px;          /* Añade un poco de margen interno */
+}
+
+
+#first4-photo .p1-b {
+    display: flex;
+    gap: 2px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+#first4-photo .p1-b button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+#first4-photo .p1-b button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+
 #f1-content {
     padding: 20px;
     display: flex;
@@ -495,6 +884,58 @@ main {
 }
 
 #f1-content img {
+    max-width: 102%;
+    height: auto;
+    border: 1px solid white;
+}
+
+#f4-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#f4-content img {
+    max-width: 102%;
+    height: auto;
+    border: 1px solid white;
+}
+
+#f5-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#f5-content img {
+    max-width: 102%;
+    height: auto;
+    border: 1px solid white;
+}
+
+#f6-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#f6-content img {
+    max-width: 102%;
+    height: auto;
+    border: 1px solid white;
+}
+
+#f7-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#f7-content img {
     max-width: 102%;
     height: auto;
     border: 1px solid white;
@@ -538,6 +979,7 @@ main {
 #first-photo2 {
     position: relative;
     margin: 40px auto;
+    margin-left: -233px;
     background-image: url("photosback.gif");
 	animation: moverfondoA 30s linear infinite;
     background-size: 80px;
@@ -650,7 +1092,7 @@ main {
 }
 
 .popup-demon {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -664,26 +1106,27 @@ main {
 
 .popup-demon img {
   width:700px;
-  height: auto;
+  height: 628px;
 }
 
 .popup-demon .demon-window {
   width: 700px; /* Puedes ajustar si quieres que sea más grande */
-  height: auto;
+  height: 680px;
+  border: 3px solid red;
   font-family: "Pixelify Sans", sans-serif;
+  
 }
 
 .popup-demon .barra-p2 {
-  color: white;
+  color: rgb(255, 5, 5);
   padding: 5px;
   display: flex;
   justify-content: space-between;
+  border: 4px solid red;
   align-items: center;
   background: url("satan.gif");
   background-repeat: repeat;
-  margin-left: 21px;
-  margin-right: 20px;
-  margin-bottom: -21px;
+  margin: 0px;
 }
 
 .popup-demon .p2-v {
@@ -694,12 +1137,6 @@ main {
   box-shadow: 4px 4px black;
 }
 
-#f1-content img {
-  width: 700px;
-  height: auto;
-  padding: 0px;
-  margin: 0px;
-}
 
 .first-photo4 {
     display: flex;
@@ -708,6 +1145,7 @@ main {
     left: 50%;
     transform: translate(-130%, -50%);
     margin: 5px;
+    margin-left:30px;
     background-image: url("photosback.gif");
 	animation: moverfondoA 30s linear infinite;
     background-size: 90px;
@@ -719,6 +1157,11 @@ main {
     min-height: 300px;
     box-shadow: 4px 4px 0 #808080;
     text-align: center;
+}
+
+.first-photo4 img {
+    margin-top: 7px;
+    border: 3px solid white;
 }
 
 .first-photo4 .barra-p1 {
@@ -778,8 +1221,7 @@ main {
 .f2-content .p1-b button:active {
     padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
 }
 
 .f2-content img {
@@ -787,16 +1229,18 @@ main {
     height: auto;
     display: flex;
     flex-direction: row;
-    z-index: 9999999;
+    z-index: 9999;
 }
 
-#f2-content {
+.f2-content {
   padding-top: 12px; /* crea el espacio que deseas */
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 12px;
   border: 1px solid white;
-  z-index: 9999999999;
+  margin-left: 1000px;
+  position: absolute;
+  z-index: 9999;
 }
 
 .oculto {
@@ -960,9 +1404,8 @@ main {
     padding: 10px;
     padding-top: 13px;
     padding-bottom: 13px;
-    z-index: 90;
+    z-index: 205;
     margin-left: -10px;
-    border: url("border.png") 20px solid;
     overflow: hidden; /* evita que el borde decorativo sobresalga */
 }
 
@@ -989,6 +1432,8 @@ main {
 .top #fondotop{
     position: relative; /* clave para que el ::before no se salga */
     width: 920px;
+    background-color: white;
+    transition: background-color 0.8s, background-image 0.8s;
     height: 5040px;
     background: url("fondomoving3.png");
     margin: 0 auto;
@@ -1023,8 +1468,8 @@ main {
     background-image: url("galaxygif.gif");
     animation: moverfondoA 30s linear 0s infinite normal none running;
     width: 250px;
-    height: 900px;
-    z-index: 16;
+    height: 950px;
+    z-index: 3;
     margin-left: 61px;
     margin-top: 50px;
 }
@@ -1043,14 +1488,550 @@ main {
 #borde2{
     position: absolute; /* clave para que el ::before no se salga */
     width: 282px;
-    height: 920px;
+    height: 975px;
     border-image: url("border3.png") 200 round;
     background-position: center;
     border-image-width: 100px;
     margin: 0 auto;
     transform: translate(-4.015%, 9%);
-    margin-top: -37px;
+    margin-top: -42px;
     margin-left: 59px;
-    z-index: 20;
+    z-index: 202;
+    pointer-events: none;
     overflow: hidden; /* evita que el borde decorativo sobresalga */
+}
+
+.contenido-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 500px;
+    display: grid;
+    z-index: 198;
+    color: whitesmoke;
+    justify-content: left;
+    margin-left: 80px;
+}
+
+.contenido-grid p {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 20px;
+    margin-left: 55px;
+    text-align: center;
+}
+
+#gridprincipal {
+    position: absolute;
+    font-size: 22px;
+    margin-top: 90px;
+    margin-left: -19px;
+    padding: 50px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    animation: moverfondoA 20s linear 0s infinite normal none running;
+    padding-right: 130px;
+    border: 4px solid white;
+    background-image: url("realbackcard.png");
+    background-size: 300px;
+    z-index: -2;
+    justify-content: left;
+    text-align: left;
+}
+
+
+
+#fondogridprincipal {
+    position: absolute;
+    background-image: url("fondomoving3.png");
+    animation: moverfondoD 10s linear 0s infinite normal none running;
+    margin-top: 190px;
+    margin-left: 7.5px;
+    z-index: -5;
+    width: 195px;
+    height: 70px;
+    border: 4px solid white;
+}
+
+
+
+#fondogridprincipal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.349); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#gridprincipal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.59); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+.botongrid1{
+    background-image: url("repback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 35px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 212px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid1:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+    z-index: 500;
+}
+
+.botongrid1:hover {
+    cursor: pointer;
+}
+
+.botongrid1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid1 > * {
+    z-index: 500;
+}
+
+#gridgaleria {
+    position: absolute;
+    font-size: 23px;
+    margin-top: 280px;
+    margin-left: -19px;
+    animation: moverfondoA 20s linear 0s infinite normal none running;
+    padding: 50px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 140px;
+    padding-top: 10px;
+    border: 4px solid white;
+    background-image: url("batman.jpg");
+    background-size: 200px;
+    z-index: -2;
+    justify-content: left;
+    text-align: left;
+}
+
+#gridgaleria::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.59); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+.botongrid2{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 365px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid2 > * {
+    z-index: 2;
+}
+
+.botongrid3{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 430px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid3 > * {
+    z-index: 2;
+}
+
+.botongrid4{
+    background-image: url("fondomoving2.png");
+    background-size: 100px;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 495px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid4 > * {
+    z-index: 2;
+}
+
+#fondogridgaleria {
+    position: absolute;
+    background-image: url("bats.png");
+    background-color: #000000;
+    animation: moverfondoD 10s linear 0s infinite normal none running;
+    margin-top: 345px;
+    margin-left: 7.5px;
+    z-index: -6;
+    width: 195px;
+    height: 200px;
+    border: 4px solid white;
+}
+
+#fondogridgaleria::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.349); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#gridbiblioteca {
+    position: absolute;
+    font-size: 22px;
+    margin-top: 565px;
+    margin-left: -19px;
+    padding: 50px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 110px;
+    padding-top: 10px;
+    border: 4px solid white;
+    animation: moverfondoA 26s linear 0s infinite normal none running;
+    background-image: url("seven-back.jpg");
+    background-size: 300px;
+    z-index: -2;
+    justify-content: left;
+    text-align: left;
+}
+
+#gridbiblioteca::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.59); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+.botongrid5{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 642px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid5 > * {
+    z-index: 2;
+}
+
+.botongrid6{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 710px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid6 > * {
+    z-index: 2;
+}
+
+.botongrid7{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 780px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid7::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid7 > * {
+    z-index: 2;
+}
+
+.botongrid8{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 850px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+
+.botongrid8::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid8 > * {
+    z-index: 2;
+}
+
+.botongrid9{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 915px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+.botongrid9::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid9 > * {
+    z-index: 2;
+}
+
+.botongrid10{
+    background-image: url("photosback.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
+    border: 2px solid #ffffff;
+    color: white;
+    font-size: 16px;
+    width: 180px;
+    height: 40px; 
+    cursor: pointer;
+    font-family: Pixelify Sans;
+    position: absolute;
+    margin-top: 980px;
+    margin-left: 18.5px;
+    padding-bottom: 10px;
+    z-index: 201;
+}
+.botongrid10::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.388); /* capa negra semitransparente */
+    z-index: -1;
+}
+
+.botongrid10 > * {
+    z-index: 2;
+}
+
+.gridsecciones {
+    z-index: 199;
+}
+
+.contenido2 {
+    display: none;
+}
+
+.detalles-c1 {
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.detalles-c1.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.contenido1 {
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido1.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }

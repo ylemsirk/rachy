@@ -368,6 +368,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const btnGaleria = document.querySelector('.botongrid2');
+  const btnPrincipal = document.querySelector('.botongrid1');
+  const detalles = document.querySelectorAll('.detalles-c1');
+  const contenido1 = document.querySelector('.contenido1');
+  const contenido2 = document.querySelector('.contenido2');
+
+  btnGaleria.addEventListener('click', () => {
+    detalles.forEach(el => el.classList.add('ocultar'));
+    if (contenido1) contenido1.classList.add('ocultar');
+    if (contenido2) contenido2.style.display = 'block';
+  });
+
+  btnPrincipal.addEventListener('click', () => {
+    detalles.forEach(el => el.classList.remove('ocultar'));
+    if (contenido1) contenido1.classList.remove('ocultar');
+    if (contenido2) contenido2.style.display = 'none';
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnGaleria = document.querySelector('.botongrid2');
+  const btnPrincipal = document.querySelector('.botongrid1');
+  const fondotop = document.querySelector('.top #fondotop');
+  const fondoall = document.querySelector('body');
+
+  btnGaleria.addEventListener('click', () => {
+    fondotop.style.backgroundImage = 'url("bats.png")';
+    fondotop.style.backgroundColor = 'black';
+    fondoall.style.backgroundColor = 'rgb(20, 20, 20)';
+  });
+
+  btnPrincipal.addEventListener('click', () => {
+    fondotop.style.backgroundImage = 'url("fondomoving3.png")';
+    fondotop.style.backgroundColor = '';
+    fondoall.style.backgroundColor = '';
+  });
+});
 
 
 
