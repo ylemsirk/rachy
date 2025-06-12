@@ -180,6 +180,246 @@ main {
     z-index: -2;
 }
 
+#roblox {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#roblox h1 {
+    color: rgb(0, 100, 162);
+}
+
+#roblox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#extragaleria {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#extragaleria h1 {
+    color: rgb(0, 100, 162);
+}
+
+#extragaleria::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#historia1 {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#historia1 h1 {
+    color: rgb(0, 100, 162);
+}
+
+#historia1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#historia2 {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#historia2 h1 {
+    color: rgb(0, 100, 162);
+}
+
+#historia2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#historia3 {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#historia3 h1 {
+    color: rgb(0, 100, 162);
+}
+
+#historia3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#historia4 {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#historia4 h1 {
+    color: rgb(0, 100, 162);
+}
+
+#historia4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#historia5 {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#historia5 h1 {
+    color: rgb(0, 100, 162);
+}
+
+#historia5::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
+#extrabiblioteca {
+    position: relative; /* clave para que el ::before no se salga */
+    margin: 100px auto;
+    color: rgb(0, 137, 168);
+    width: 800px;
+    background-image: url("realbackcard.png");
+    animation: moverfondo 30s linear 0s infinite normal none running;
+    background-size: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 4px 4px 0 #808080;
+    z-index: 10;
+    overflow: hidden; /* evita que el borde decorativo sobresalga */
+    transform: translate(0%, 0%);
+}
+
+#extrabiblioteca h1 {
+    color: rgb(0, 100, 162);
+}
+
+#extrabiblioteca::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    z-index: -2;
+}
+
 .reproductor-musica::before {
     content: '';
     position: absolute;
@@ -279,12 +519,365 @@ main {
     font-family: Pixelify Sans;
 }
 
-
 #recuerdos .botones-ventana-rec button:active {
     box-shadow: inset 2px 2px rgb(80, 80, 80);
     padding-bottom: 0px;
     padding-right: 0px;
 }
+
+#roblox .barra-superior3 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#roblox .titulo-ventana3 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#roblox .botones-ventana-rob {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#roblox .botones-ventana-rob button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+
+#roblox .botones-ventana-rob button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#extragaleria .barra-superior4 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#extragaleria .titulo-ventana4 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#extragaleria .botones-ventana-exg {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#extragaleria .botones-ventana-exg button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#extragaleria .botones-ventana-exg button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#historia1 .barra-superior5 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#historia1 .titulo-ventana5 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#historia1 .botones-ventana-hi1 {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia1 .botones-ventana-hi1 button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia1 .botones-ventana-hi1 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#historia2 .barra-superior6 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#historia2 .titulo-ventana6 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#historia2 .botones-ventana-hi2 {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia2 .botones-ventana-hi2 button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia2 .botones-ventana-hi2 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#historia3 .barra-superior7 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#historia3 .titulo-ventana7 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#historia3 .botones-ventana-hi3 {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia3 .botones-ventana-hi3 button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia3 .botones-ventana-hi3 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#historia4 .barra-superior8 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#historia4 .titulo-ventana8 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#historia4 .botones-ventana-hi4 {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia4 .botones-ventana-hi4 button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia4 .botones-ventana-hi4 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#historia5 .barra-superior9 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#historia5 .titulo-ventana9 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#historia5 .botones-ventana-hi5 {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia5 .botones-ventana-hi5 button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#historia5 .botones-ventana-hi5 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+#extrabiblioteca .barra-superior10 {
+    background: url("repback.gif");
+    background-size: cover;
+    background-position: cover;
+    color: white;
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#extrabiblioteca .titulo-ventana10 {
+    font-weight: bold;
+    font-size: 0.9rem;
+    font-family: Pixelify Sans, sans-serif;
+    cursor: none;
+}
+
+#extrabiblioteca .botones-ventana-exb {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+#extrabiblioteca .botones-ventana-exb button {
+    background-color: rgb(191, 246, 255);
+    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    font-family: Pixelify Sans;
+}
+
+#extrabiblioteca .botones-ventana-exb button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
 
 /* Contenido interno de la tarjeta */
 .contenido-card {
@@ -313,7 +906,7 @@ main {
     pointer-events: none; /* permite hacer clics normalmente */
 }
 
-contenido-recuerdos {
+.contenido-recuerdos {
     position: relative;
     padding-right: 50px;
     padding-left: 50px;
@@ -338,6 +931,207 @@ contenido-recuerdos {
     z-index: 2;
     pointer-events: none; /* permite hacer clics normalmente */
 }
+
+.contenido-roblox { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-roblox::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contenido-extragaleria { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-extragaleria::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contenido-historia1 { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-historia1::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contenido-historia2 { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-historia2::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contenido-historia3 { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-historia3::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contenido-historia4 { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-historia4::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contenido-historia5 { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-historia5::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.contenido-extrabiblioteca { 
+    position: relative;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    text-align: center;
+    z-index: -2;
+}
+
+.contenido-extrabiblioteca::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border-style: solid;
+    border-width: 20px;
+    border-image: url("border.png") 200 round;
+    border-image-width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
 
 .reproductor-musica {
     display: flex;
@@ -458,6 +1252,93 @@ contenido-recuerdos {
 }
 
 .contenido2-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
+.contenido3-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
+.contenido4-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
+.contenido5-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+
+}.contenido6-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
+.contenido7-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
+.contenido8-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
+.contenido9-ventana {
+    position: fixed;
+    left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
+    top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
+    width: 260px;
+    background-color: #c0c0c0;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px 0 #808080;
+    z-index: 999;
+}
+
+.contenido10-ventana {
     position: fixed;
     left: calc(100% - 310px); /* 300px de ancho + margen de seguridad */
     top: calc(100% - 300px);  /* ajusta según altura de tu ventana */
@@ -613,6 +1494,223 @@ contenido-recuerdos {
     padding-bottom: 0px;
     padding-right: 0px;
 }
+
+.botones-ventana2 {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana2 button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana2 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-rob {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-rob button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-rob button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-extragaleria {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-extragaleria button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-extragaleria button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-hi1 {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-hi1 button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-hi1 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-hi2 {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-hi2 button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-hi2 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-hi3 {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-hi3 button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-hi3 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-hi4 {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-hi4 button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-hi4 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-hi5 {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-hi5 button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-hi5 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+.botones-ventana-exb {
+    display: flex;
+    gap: 2px;
+}
+
+.botones-ventana-exb button {
+    background-color: silver;
+    box-shadow: inset -3px -3px rgb(80, 80, 80), inset 2px 2px whitesmoke;
+    border: 1px solid #000;
+    width: 20px;
+    height: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding-bottom: 2px;
+    padding-right: 2px;
+}
+
+.botones-ventana-exb button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
 
 
 /*===========================
@@ -2013,6 +3111,37 @@ contenido-recuerdos {
 }
 
 .contenido2 {
+    display: none;
+}
+
+.contenido3 {
+    display: none;
+}
+
+.contenido4 {
+    display: none;
+}
+
+.contenido5 {
+    display: none;
+}
+
+.contenido6 {
+    display: none;
+}
+.contenido7 {
+    display: none;
+}
+
+.contenido8 {
+    display: none;
+}
+
+.contenido9 {
+    display: none;
+}
+
+.contenido10 {
     display: none;
 }
 
