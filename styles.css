@@ -40,6 +40,15 @@
   }
 }
 
+@keyframes moverfondoB {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -100%;
+  }
+}
+
 
 body {
     background: url("bunny.gif");
@@ -146,16 +155,16 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.726); /* capa negra semitransparente */
     z-index: -2;
 }
 
 #recuerdos {
     position: relative; /* clave para que el ::before no se salga */
     margin: 100px auto;
-    color: rgb(0, 137, 168);
+    color: rgb(255, 0, 225);
     width: 800px;
-    background-image: url("realbackcard.png");
+    background-image: url("batman.jpg");
     animation: moverfondo 30s linear 0s infinite normal none running;
     background-size: cover;
     border: 2px solid #ffffff;
@@ -176,7 +185,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.808); /* capa negra semitransparente */
     z-index: -2;
 }
 
@@ -213,9 +222,9 @@ main {
 #extragaleria {
     position: relative; /* clave para que el ::before no se salga */
     margin: 100px auto;
-    color: rgb(0, 137, 168);
+    color: rgb(255, 145, 145);
     width: 800px;
-    background-image: url("realbackcard.png");
+    background-image: url("mymelody.jpg");
     animation: moverfondo 30s linear 0s infinite normal none running;
     background-size: cover;
     border: 2px solid #ffffff;
@@ -482,14 +491,17 @@ main {
 }
 
 #recuerdos .barra-superior2 {
-    background: url("repback.gif");
-    background-size: cover;
-    background-position: cover;
+    background: url("bats.png");
+    background-color: black;
+    background-size: 120px;
+    animation: moverfondoB 5s linear 0s infinite normal none running;
     color: white;
+    border: 3px solid white;
     padding: 4px 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 5px;
 }
 
 #recuerdos .titulo-ventana2 {
@@ -506,8 +518,8 @@ main {
 }
 
 #recuerdos .botones-ventana-rec button {
-    background-color: rgb(191, 246, 255);
-    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    background-color: rgb(206, 107, 255);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.511), inset 2px 2px rgba(255, 255, 255, 0.511);
     border: 1px solid #000;
     width: 20px;
     height: 20px; 
@@ -574,6 +586,7 @@ main {
     background: url("repback.gif");
     background-size: cover;
     background-position: cover;
+    border: 3px solid white;
     color: white;
     padding: 4px 6px;
     display: flex;
@@ -2534,6 +2547,7 @@ main {
     transition: background-color 0.8s, background-image 0.8s;
     height: 5040px;
     background: url("fondomoving3.png");
+    background-size: 10%;
     margin: 0 auto;
     transform: translate(-4.015%, 9%);
     background-position: center;
@@ -2545,6 +2559,18 @@ main {
     z-index: 10;
     overflow: hidden; /* evita que el borde decorativo sobresalga */
 }
+
+.top #fondotop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.168); /* capa negra semitransparente */
+    z-index: -2;
+}
+
 #borde{
     position: absolute; /* clave para que el ::before no se salga */
     width: 959px;
@@ -2749,10 +2775,14 @@ main {
     z-index: -2;
 }
 
+
+
 .botongrid2{
-    background-image: url("photosback.gif");
+    background-image: url("bats.png");
     background-size: cover;
     background-position: center;
+    background-color: black;
+    animation: moverfondoB 5s linear 0s infinite normal none running;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
     border: 2px solid #ffffff;
     color: white;
@@ -2852,7 +2882,7 @@ main {
 
 #fondogridgaleria {
     position: absolute;
-    background-image: url("bats.png");
+    background-image: url("stars.gif");
     background-color: #000000;
     animation: moverfondoD 10s linear 0s infinite normal none running;
     margin-top: 345px;
@@ -3111,38 +3141,102 @@ main {
 }
 
 .contenido2 {
-    display: none;
+    display: block;      /* <-- Cambia esto */
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido2.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contenido3 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido3.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contenido4 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido4.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contenido5 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido5.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contenido6 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
 }
+
+.contenido6.ocultar {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .contenido7 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido7.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contenido8 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido8.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contenido9 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido9.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .contenido10 {
-    display: none;
+    display: block;
+    transition: opacity 0.8s;
+    opacity: 1;
+}
+
+.contenido10.ocultar {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .detalles-c1 {
@@ -3164,3 +3258,4 @@ main {
     opacity: 0;
     pointer-events: none;
 }
+

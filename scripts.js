@@ -369,43 +369,125 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const btnGaleria = document.querySelector('.botongrid2');
-  const btnPrincipal = document.querySelector('.botongrid1');
-  const detalles = document.querySelectorAll('.detalles-c1');
-  const contenido1 = document.querySelector('.contenido1');
-  const contenido2 = document.querySelector('.contenido2');
-
-  btnGaleria.addEventListener('click', () => {
-    detalles.forEach(el => el.classList.add('ocultar'));
-    if (contenido1) contenido1.classList.add('ocultar');
-    if (contenido2) contenido2.style.display = 'block';
-  });
-
-  btnPrincipal.addEventListener('click', () => {
-    detalles.forEach(el => el.classList.remove('ocultar'));
-    if (contenido1) contenido1.classList.remove('ocultar');
-    if (contenido2) contenido2.style.display = 'none';
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const btnGaleria = document.querySelector('.botongrid2');
-  const btnPrincipal = document.querySelector('.botongrid1');
   const fondotop = document.querySelector('.top #fondotop');
-  const fondoall = document.querySelector('body');
+  const fondoall = document.body;
+  
 
-  btnGaleria.addEventListener('click', () => {
-    fondotop.style.backgroundImage = 'url("bats.png")';
-    fondotop.style.backgroundColor = 'black';
-    fondoall.style.backgroundColor = 'rgb(20, 20, 20)';
-  });
+  // Configuración de fondos y colores para cada contenido
+  const backgrounds = {
+    1: {
+      image: 'fondomoving3.png',
+      fondotopColor: 'rgb(0, 137, 168)',
+      bodyColor: 'rgb(0, 168, 240)'
+    },
+    2: {
+      image: 'stars.gif',
+      fondotopColor: 'black',
+      bodyColor: 'rgb(20, 20, 20)'
+    },
+    3: {
+      image: 'stars.gif.',
+      fondotopColor: 'black',
+      bodyColor: 'rgb(20, 20, 20)'
+    },
+    4: {
+      image: 'fondomoving2.png',
+      fondotopColor: 'rgb(255, 120, 180)', // rosado
+      bodyColor: 'rgb(255, 190, 190)'
+    },
+    5: {
+      image: 'forhis.png',
+      fondotopColor: 'orange',
+      bodyColor: 'orange'
+    },
+    6: {
+      image: 'forhis.png',
+      fondotopColor: 'orange',
+      bodyColor: 'orange'
+    },
+    7: {
+      image: 'forhis.png',
+      fondotopColor: 'orange',
+      bodyColor: 'orange'
+    },
+    8: {
+      image: 'forhis.png',
+      fondotopColor: 'orange',
+      bodyColor: 'orange'
+    },
+    9: {
+      image: 'forhis.png',
+      fondotopColor: 'orange',
+      bodyColor: 'orange'
+    },
+    10: {
+      image: 'fondomoving.png',
+      fondotopColor: 'purple',
+      bodyColor: 'purple'
+    }
+  };
 
-  btnPrincipal.addEventListener('click', () => {
-    fondotop.style.backgroundImage = 'url("fondomoving3.png")';
-    fondotop.style.backgroundColor = '';
-    fondoall.style.backgroundColor = '';
-  });
+  // Agrupaciones para evitar cambios de fondo entre ciertos botones
+  const grupoBats = [2, 3];
+  const grupoOrange = [5, 6, 7, 8, 9];
+
+  // Oculta todos los contenidos excepto el seleccionado
+  function mostrarContenido(num) {
+    for (let i = 1; i <= 10; i++) {
+      const cont = document.querySelector(`.contenido${i}`);
+      if (cont) {
+        if (i === num) {
+          cont.classList.remove('ocultar');
+        } else {
+          cont.classList.add('ocultar');
+        }
+      }
+    }
+  }
+
+  // Guarda el último grupo de fondo aplicado
+  let ultimoGrupo = null;
+
+  // Maneja el cambio de fondo y color según las reglas
+  function cambiarFondo(num) {
+    // Detectar grupo actual
+    let grupoActual = null;
+    if (grupoBats.includes(num)) grupoActual = 'bats';
+    if (grupoOrange.includes(num)) grupoActual = 'orange';
+
+    // Si es grupo bats y el anterior también, no cambiar fondo
+    if (grupoActual === 'bats' && ultimoGrupo === 'bats') return;
+    // Si es grupo orange y el anterior también, no cambiar fondo
+    if (grupoActual === 'orange' && ultimoGrupo === 'orange') return;
+
+    // Cambiar fondo y colores
+    const bg = backgrounds[num];
+    if (bg) {
+      fondotop.style.backgroundImage = `url("${bg.image}")`;
+      fondotop.style.backgroundColor = bg.fondotopColor;
+      fondoall.style.backgroundColor = bg.bodyColor;
+    }
+
+    // Actualiza el grupo actual
+    ultimoGrupo = grupoActual;
+    // Si no es grupo especial, resetea
+    if (!grupoActual) ultimoGrupo = null;
+  }
+
+  // Asigna eventos a todos los botones
+  for (let i = 1; i <= 10; i++) {
+    const btn = document.querySelector(`.botongrid${i}`);
+    const cont = document.querySelector(`.contenido${i}`);
+    if (btn && cont) {
+      btn.addEventListener('click', () => {
+        // Solo cambiar si el contenido está oculto
+        if (cont.classList.contains('ocultar')) {
+          mostrarContenido(i);
+          cambiarFondo(i);
+        }
+      });
+    }
+  }
 });
-
 
 
