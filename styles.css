@@ -192,9 +192,9 @@ main {
 #roblox {
     position: relative; /* clave para que el ::before no se salga */
     margin: 100px auto;
-    color: rgb(0, 137, 168);
+    color: rgb(255, 0, 225);
     width: 800px;
-    background-image: url("realbackcard.png");
+    background-image: url("megumi.jpg");
     animation: moverfondo 30s linear 0s infinite normal none running;
     background-size: cover;
     border: 2px solid #ffffff;
@@ -215,7 +215,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.808); /* capa negra semitransparente */
     z-index: -2;
 }
 
@@ -245,7 +245,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(80, 80, 80, 0.819); /* capa negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.529); /* capa negra semitransparente */
     z-index: -2;
 }
 
@@ -538,14 +538,18 @@ main {
 }
 
 #roblox .barra-superior3 {
-    background: url("repback.gif");
-    background-size: cover;
-    background-position: cover;
+    background: url("cats.png");
+    background-color: black;
+    background-size: 70px;
+    background-position: center;
+    animation: moverfondoD 10s linear 0s infinite normal none running;
     color: white;
+    border: 3px solid white;
     padding: 4px 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 5px;
 }
 
 #roblox .titulo-ventana3 {
@@ -562,8 +566,8 @@ main {
 }
 
 #roblox .botones-ventana-rob button {
-    background-color: rgb(191, 246, 255);
-    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    background-color: rgb(206, 107, 255);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.511), inset 2px 2px rgba(255, 255, 255, 0.511);
     border: 1px solid #000;
     width: 20px;
     height: 20px; 
@@ -583,10 +587,10 @@ main {
 }
 
 #extragaleria .barra-superior4 {
-    background: url("repback.gif");
-    background-size: cover;
-    background-position: cover;
+    background: url("extra.gif");
+    background-size: 90px;
     border: 3px solid white;
+    animation: moverfondo 10s linear 0s infinite normal none running;
     color: white;
     padding: 4px 6px;
     display: flex;
@@ -608,8 +612,8 @@ main {
 }
 
 #extragaleria .botones-ventana-exg button {
-    background-color: rgb(191, 246, 255);
-    box-shadow: inset -3px -3px rgb(8, 112, 126), inset 2px 2px whitesmoke;
+    background-color: rgb(255, 202, 202);
+    box-shadow: inset -3px -3px rgb(254, 153, 153), inset 2px 2px white;
     border: 1px solid #000;
     width: 20px;
     height: 20px; 
@@ -933,13 +937,13 @@ main {
 .contenido-recuerdos::before {
     content: "";
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     border-style: solid;
     border-width: 20px;
-    border-image: url("border.png") 200 round;
+    border-image: url("bordergray.png") 200 round;
     border-image-width: 100px;
     z-index: 2;
     pointer-events: none; /* permite hacer clics normalmente */
@@ -947,7 +951,6 @@ main {
 
 .contenido-roblox { 
     position: relative;
-    padding-right: 50px;
     padding-left: 50px;
     padding-top: 10px;
     padding-bottom: 35px;
@@ -958,13 +961,13 @@ main {
 .contenido-roblox::before {
     content: "";
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     border-style: solid;
     border-width: 20px;
-    border-image: url("border.png") 200 round;
+    border-image: url("bordergray.png") 200 round;
     border-image-width: 100px;
     z-index: 2;
     pointer-events: none;
@@ -980,16 +983,19 @@ main {
     z-index: -2;
 }
 
+.contenido-extragaleria p{ 
+    margin-top: 20px;
+}
+
 .contenido-extragaleria::before {
     content: "";
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    border-style: solid;
-    border-width: 20px;
-    border-image: url("border.png") 200 round;
+    top: 0px;    /* Ajusta para que sobresalga */
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-width: 600px;
+    border-image: url("borderpink.png") 200 round;
     border-image-width: 100px;
     z-index: 2;
     pointer-events: none;
@@ -2814,9 +2820,9 @@ main {
 }
 
 .botongrid3{
-    background-image: url("photosback.gif");
-    background-size: cover;
+    background-image: url("cats.png");
     background-position: center;
+    animation: moverfondoB 5s linear 0s infinite normal none running;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
     border: 2px solid #ffffff;
     color: white;
@@ -2848,10 +2854,11 @@ main {
 }
 
 .botongrid4{
-    background-image: url("fondomoving2.png");
+    background-image: url("extra.gif");
     background-size: 100px;
     box-shadow: inset -3px -3px rgba(0, 0, 0, 0.632), inset 2px 2px rgba(245, 245, 245, 0.429);
     border: 2px solid #ffffff;
+    animation: moverfondo 10s linear 0s infinite normal none running;
     color: white;
     font-size: 16px;
     width: 180px;
@@ -3259,3 +3266,282 @@ main {
     pointer-events: none;
 }
 
+/* Ventana principal */
+.contenido-roblox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    background: none;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.ventana-y-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonesset1 {
+    margin-top: 5px; /* Espacio entre la ventana y los botones */
+    display: flex;
+    gap: 10px;
+}
+
+.botonset1 {
+    width:40px;
+    height: 40px;
+    margin-left: 50px;
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.495), inset 3px 3px rgba(255, 255, 255, 0.549);
+    cursor: pointer;
+}
+
+.botonset1:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+
+/* Marco de la ventana */
+.set#roblox1 {
+    display: block;
+    position: relative;
+    margin: 16px;
+    margin-top: 30px;
+    margin-left: 70px;
+    border: 5px solid #ffffff;
+    background: url('stars.png');
+    box-shadow: 1px 1px 0 #fff, -1px -1px 0 #808080;
+    width: 300px;      /* Ancho fijo mayor que la imagen */
+    min-width: 300px;  /* Puedes ajustar este valor si quieres un mínimo */
+    max-width: 100%;   /* Para que no se pase del contenedor padre */
+    height: auto;
+    padding-bottom: 330px; /* Opcional: espacio extra abajo */
+    padding-left: 20px;
+    padding-right: 19px;
+    overflow: hidden;
+}
+
+
+.set#roblox1 img {
+    position: absolute;
+    top: 46px;
+    width: 300px;
+    height: auto;
+    object-fit: contain; /* o cover si prefieres */
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    display: block;
+    border: none; /* Opcional: elimina el borde si no lo quieres */
+    background: none;
+    box-shadow: none;
+}
+/* Barra superior estilo Win95 */
+.barra-superiorrob {
+    background: url("cats.png");
+    color: white;
+    padding: 4px 9px;
+    display: flex;
+    border: 3px solid white;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ffffff;
+    font-family: 'Pixelify Sans', 'MS Sans Serif', Arial, sans-serif;
+    font-size: 1rem;
+    user-select: none;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+/* Título */
+.titulo-ventanarob {
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: none;
+    font-family: Pixelify Sans, sans-serif;
+}
+
+/* Botones ventana */
+.botones-ventana-rob2 {
+    display: flex;
+    gap: 2px;
+    font-family: Pixelify Sans;
+}
+
+.botones-ventana-rob2 button {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(206, 107, 255);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.511), inset 2px 2px rgba(255, 255, 255, 0.511);
+    border: 1px outset #000000;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-left: 2px;
+    padding-bottom: 2px;
+    padding-right: 2px;
+    transition: background 0.1s;
+    font-family: Pixelify Sans;
+}
+
+.botones-ventana-rob2 button:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0px;
+    padding-right: 0px;
+}
+
+/* Imagen dentro de la ventana */
+.barra-superiorrob img {
+    display: block;
+    margin: 16px auto 0 auto;
+    border: 2px solid #808080;
+    background: #fff;
+    box-shadow: 1px 1px 0 #fff, -1px -1px 0 #808080;
+    max-width: 95%;
+}
+
+.contenido-roblox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+
+.imagenes-lado {
+    position: relative; /* Importante para que los hijos absolutos se posicionen respecto a este contenedor */
+    width: 350px;       /* Ajusta según el espacio que quieras reservar */
+    height: 350px;      /* Ajusta según lo que necesites */
+}
+
+.img-kuromi {
+    position: absolute;
+    top: 170px;
+    left: -20;
+    width: 200px;
+    height: 200px;
+}
+
+.img-kuromi img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+    display: block;
+}
+
+.img-kuromi img.activa {
+    opacity: 1;
+    z-index: 2;
+}
+
+.img-texto {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.img-texto img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: 1;
+}
+
+.img-texto p {
+    position: absolute;
+    top: 0;
+    width: 160px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff00aa;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 0 8px;
+    font-size: 15px;
+    word-break: break-word;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 2;
+}
+
+.img-texto p.activa {
+    opacity: 1;
+}
+
+
+/* Opcional: para que las imágenes no se salgan del contenedor */
+
+.set#roblox1 img.activa {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Botón grande a la izquierda de la foto */
+.boton-lateral-izq {
+    position: absolute;
+    top: 50%;
+    left: 35px; /* Ajusta la distancia a la izquierda de la ventana */
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: inset -4px -4px rgba(0, 0, 0, 0.495), inset 4px 4px rgba(255, 255, 255, 0.549);
+    background: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.boton-lateral-izq:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+/* Botón grande a la derecha de Kuromi */
+.boton-lateral-der {
+    position: absolute;
+    top: 248px;
+    right: 30px; /* Ajusta la distancia a la derecha de Kuromi */
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: inset -4px -4px rgba(0, 0, 0, 0.495), inset 4px 4px rgba(255, 255, 255, 0.549);
+    background: #fff;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.boton-lateral-der:active {
+    box-shadow: inset 2px 2px rgb(80, 80, 80);
+    padding-bottom: 0;
+    padding-right: 0;
+}

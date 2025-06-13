@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bodyColor: 'rgb(20, 20, 20)'
     },
     4: {
-      image: 'fondomoving2.png',
+      image: 'fondomoving2.jpeg',
       fondotopColor: 'rgb(255, 120, 180)', // rosado
       bodyColor: 'rgb(255, 190, 190)'
     },
@@ -491,3 +491,75 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Relación entre imagen principal, kuromi y mensaje
+  const slides = [
+    {
+      main: document.querySelector('#roblox1 img[src="r28.jpg"]'),
+      kuromi: document.querySelector('.img-kuromi img[src="kuromi.png"]'),
+      mensaje: document.querySelector('.img-texto p:nth-child(2)')
+    },
+    {
+      main: document.querySelector('#roblox1 img[src="r26.jpg"]'),
+      kuromi: document.querySelector('.img-kuromi img[src="kuromi3.png"]'), // Puedes cambiar el nombre aquí
+      mensaje: document.querySelector('.img-texto p:nth-child(3)')
+    },
+    {
+      main: document.querySelector('#roblox1 img[src="r27.jpg"]'),
+      kuromi: document.querySelectorAll('.img-kuromi img[src="kuromi.gif"]')[0],
+      mensaje: document.querySelector('.img-texto p:nth-child(4)')
+    },
+    {
+      main: document.querySelector('#roblox1 img[src="r25.jpg"]'),
+      kuromi: document.querySelectorAll('.img-kuromi img[src="kuromi.gif"]')[1],
+      mensaje: document.querySelector('.img-texto p:nth-child(5)')
+    }
+  ];
+
+  let indice = 0;
+
+  function mostrarImagen(i) {
+    slides.forEach((slide, idx) => {
+      if (slide.main) slide.main.classList.toggle('activa', idx === i);
+      if (slide.kuromi) slide.kuromi.classList.toggle('activa', idx === i);
+      if (slide.mensaje) slide.mensaje.classList.toggle('activa', idx === i);
+    });
+  }
+
+  mostrarImagen(indice);
+
+  const btnPrev = document.getElementById('botonset1');
+  const btnNext = document.getElementById('botonset2');
+  const btnGrid1 = document.querySelector('.botongrid1');
+  const btnGrid2 = document.querySelector('.botongrid2');
+
+  btnNext.addEventListener('click', () => {
+    indice = (indice + 1) % slides.length;
+    mostrarImagen(indice);
+  });
+
+  btnPrev.addEventListener('click', () => {
+    indice = (indice - 1 + slides.length) % slides.length;
+    mostrarImagen(indice);
+  });
+
+  btnGrid2 && btnGrid2.addEventListener('click', () => {
+    if (indice === 2) {
+      indice = 3;
+      mostrarImagen(indice);
+    } else if (indice === 3) {
+      indice = 0;
+      mostrarImagen(indice);
+    }
+  });
+
+  btnGrid1 && btnGrid1.addEventListener('click', () => {
+    if (indice === 3) {
+      indice = 2;
+      mostrarImagen(indice);
+    } else if (indice === 0) {
+      indice = 3;
+      mostrarImagen(indice);
+    }
+  });
+});
