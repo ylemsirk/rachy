@@ -492,74 +492,129 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Relación entre imagen principal, kuromi y mensaje
-  const slides = [
-    {
-      main: document.querySelector('#roblox1 img[src="r28.jpg"]'),
-      kuromi: document.querySelector('.img-kuromi img[src="kuromi.png"]'),
-      mensaje: document.querySelector('.img-texto p:nth-child(2)')
-    },
-    {
-      main: document.querySelector('#roblox1 img[src="r26.jpg"]'),
-      kuromi: document.querySelector('.img-kuromi img[src="kuromi3.png"]'), // Puedes cambiar el nombre aquí
-      mensaje: document.querySelector('.img-texto p:nth-child(3)')
-    },
-    {
-      main: document.querySelector('#roblox1 img[src="r27.jpg"]'),
-      kuromi: document.querySelectorAll('.img-kuromi img[src="kuromi.gif"]')[0],
-      mensaje: document.querySelector('.img-texto p:nth-child(4)')
-    },
-    {
-      main: document.querySelector('#roblox1 img[src="r25.jpg"]'),
-      kuromi: document.querySelectorAll('.img-kuromi img[src="kuromi.gif"]')[1],
-      mensaje: document.querySelector('.img-texto p:nth-child(5)')
+    // Configuración de sets
+    const sets = [
+        {
+            root: document.querySelector('.ventana-y-botones-set1'),
+            images: Array.from(document.querySelectorAll('#roblox1 img')),
+            video: null,
+            textImgs: Array.from(document.querySelectorAll('.img-texto-set1 img')),
+            textos: Array.from(document.querySelectorAll('.img-texto-set1 p')),
+            kuromis: Array.from(document.querySelectorAll('.img-kuromi-set1 img')),
+            btnPrev: document.getElementById('botonset1'),
+            btnNext: document.getElementById('botonset2')
+        },
+        {
+            root: document.querySelector('.ventana-y-botones-set2'),
+            images: Array.from(document.querySelectorAll('#roblox2 img')),
+            video: null,
+            textImgs: Array.from(document.querySelectorAll('.img-texto-set2 img')),
+            textos: Array.from(document.querySelectorAll('.img-texto-set2 p')),
+            kuromis: Array.from(document.querySelectorAll('.img-kuromi-set2 img')),
+            btnPrev: document.getElementById('botonset21'),
+            btnNext: document.getElementById('botonset22')
+        },
+        {
+            root: document.querySelector('.ventana-y-botones-set3'),
+            images: Array.from(document.querySelectorAll('#roblox3 img')),
+            video: null,
+            textImgs: Array.from(document.querySelectorAll('.img-texto-set3 img')),
+            textos: Array.from(document.querySelectorAll('.img-texto-set3 p')),
+            kuromis: Array.from(document.querySelectorAll('.img-kuromi-set3 img')),
+            btnPrev: document.getElementById('botonset31'),
+            btnNext: document.getElementById('botonset32')
+        },
+        {
+            root: document.querySelector('.ventana-y-botones-set4'),
+            images: Array.from(document.querySelectorAll('#roblox4 img')),
+            video: document.querySelector('#roblox4 video'),
+            textImgs: Array.from(document.querySelectorAll('.img-texto-set4 img')),
+            textos: Array.from(document.querySelectorAll('.img-texto-set4 p')),
+            kuromis: Array.from(document.querySelectorAll('.img-kuromi-set4 img')),
+            btnPrev: document.getElementById('botonset41'),
+            btnNext: document.getElementById('botonset42')
+        }
+    ];
+
+    let currentSet = 0;
+    let indices = [0, 0, 0, 0]; // índice de imagen actual para cada set
+
+    // Mostrar el set activo y ocultar los demás con transición
+    function mostrarSet(idx) {
+        sets.forEach((set, i) => {
+            set.root.classList.remove('activo', 'oculto');
+            if (i === idx) {
+                set.root.style.display = 'block';
+                set.root.classList.add('activo');
+            } else {
+                set.root.classList.add('oculto');
+                setTimeout(() => set.root.style.display = 'none', 600);
+            }
+        });
+        mostrarImagen(idx, indices[idx]);
     }
-  ];
 
-  let indice = 0;
+    // Mostrar imagen, texto, kuromi y globo de texto del set y slide actual
+    function mostrarImagen(setIdx, imgIdx) {
+        const set = sets[setIdx];
+        // Imágenes principales
+        set.images.forEach((img, i) => img.classList.toggle('activa', i === imgIdx));
+        // Video (solo set 4)
+        if (set.video) set.video.classList.toggle('activa', imgIdx === set.images.length);
+        // Globos de texto
+        set.textImgs.forEach((img, i) => img.classList.toggle('activa', i === imgIdx));
+        // Textos
+        set.textos.forEach((p, i) => p.classList.toggle('activa', i === imgIdx));
+        // Kuromis
+        set.kuromis.forEach((k, i) => k.classList.toggle('activa', i === imgIdx));
+        // Efecto máquina de escribir solo al texto activo
+        set.textos.forEach((p, i) => {
+            if (i === imgIdx) {
+                if (!p.dataset.fulltext) p.dataset.fulltext = p.textContent;
+                typeWriter(p, p.dataset.fulltext);
+            }
+        });
+    }
 
-  function mostrarImagen(i) {
-    slides.forEach((slide, idx) => {
-      if (slide.main) slide.main.classList.toggle('activa', idx === i);
-      if (slide.kuromi) slide.kuromi.classList.toggle('activa', idx === i);
-      if (slide.mensaje) slide.mensaje.classList.toggle('activa', idx === i);
+    // Efecto máquina de escribir
+    function typeWriter(element, text, speed = 25) {
+        element.textContent = "";
+        let i = 0;
+        function typing() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(typing, speed);
+            }
+        }
+        typing();
+    }
+
+    // Botones internos de cada set (carrusel)
+    sets.forEach((set, setIdx) => {
+        const total = set.images.length + (set.video ? 1 : 0);
+        set.btnNext && set.btnNext.addEventListener('click', () => {
+            indices[setIdx] = (indices[setIdx] + 1) % total;
+            mostrarImagen(setIdx, indices[setIdx]);
+        });
+        set.btnPrev && set.btnPrev.addEventListener('click', () => {
+            indices[setIdx] = (indices[setIdx] - 1 + total) % total;
+            mostrarImagen(setIdx, indices[setIdx]);
+        });
     });
-  }
 
-  mostrarImagen(indice);
+    // Botones laterales para cambiar de set
+    document.querySelector('.boton-lateral-izq').addEventListener('click', () => {
+        sets[currentSet].root.classList.remove('activo');
+        currentSet = (currentSet - 1 + sets.length) % sets.length;
+        mostrarSet(currentSet);
+    });
+    document.querySelector('.boton-lateral-der').addEventListener('click', () => {
+        sets[currentSet].root.classList.remove('activo');
+        currentSet = (currentSet + 1) % sets.length;
+        mostrarSet(currentSet);
+    });
 
-  const btnPrev = document.getElementById('botonset1');
-  const btnNext = document.getElementById('botonset2');
-  const btnGrid1 = document.querySelector('.botongrid1');
-  const btnGrid2 = document.querySelector('.botongrid2');
-
-  btnNext.addEventListener('click', () => {
-    indice = (indice + 1) % slides.length;
-    mostrarImagen(indice);
-  });
-
-  btnPrev.addEventListener('click', () => {
-    indice = (indice - 1 + slides.length) % slides.length;
-    mostrarImagen(indice);
-  });
-
-  btnGrid2 && btnGrid2.addEventListener('click', () => {
-    if (indice === 2) {
-      indice = 3;
-      mostrarImagen(indice);
-    } else if (indice === 3) {
-      indice = 0;
-      mostrarImagen(indice);
-    }
-  });
-
-  btnGrid1 && btnGrid1.addEventListener('click', () => {
-    if (indice === 3) {
-      indice = 2;
-      mostrarImagen(indice);
-    } else if (indice === 0) {
-      indice = 3;
-      mostrarImagen(indice);
-    }
-  });
+    // Inicializar
+    mostrarSet(currentSet);
 });
